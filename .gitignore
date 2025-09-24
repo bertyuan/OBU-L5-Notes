@@ -1,0 +1,28 @@
+# VitePress 构建输出
+/.vitepress/dist/
+
+# Node.js 依赖
+/node_modules/
+
+# VitePress 临时文件
+/.vitepress/cache/
+
+# 环境变量
+.env
+.env.*
+
+# 日志文件
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# MacOS 系统文件
+.DS_Store
+
+# VS Code 配置
+.vscode/
+
+# 其他常见忽略项
+*.local
+*.lock
