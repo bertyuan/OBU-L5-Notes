@@ -28,6 +28,19 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/thedignityofcoffee' },
-    ]
-  }
+    ],
+
+    editLink: {
+      pattern: 'https://github.com/thedignityofcoffee/OBU-L5-Notes/edit/main/docs/:path',
+      text: 'Edit this page on GitHub'
+    },
+
+     search: {
+      provider: 'local'
+    }
+
+  },
+
+  lastUpdated: true
+
 })
