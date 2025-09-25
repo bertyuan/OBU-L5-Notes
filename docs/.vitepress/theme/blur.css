@@ -40,4 +40,14 @@
         backdrop-filter: blur(10px);
     }
 
+    .team-section {
+    margin-top: 4rem;             /* 往下移，和 features 保持间距 */
+    padding: 2rem;                /* 内边距 */
+    border-radius: 16px;          /* 圆角 */
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(12px);  /* 毛玻璃效果 */
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* 阴影 */
+    }
+
 }

@@ -27,7 +27,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/thedignityofcoffee' },
+      { icon: 'github', link: 'https://github.com/thedignityofcoffee/OBU-L5-Notes' },
     ],
 
     editLink: {

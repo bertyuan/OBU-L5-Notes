@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "随堂笔记"
+  name: "Notes"
   text: "OBU SE Level 5"
-  tagline: 'Author: thedignityofcoffee'
+  tagline: '2025 Fall Semester'
   actions:
     - theme: brand
       text: SdwCaCPP
@@ -38,3 +38,38 @@ features:
 
 ---
 
+
+<script setup>
+import { VPTeamMembers } from 'vitepress/theme'
+
+const members = [
+  {
+    avatar: 'https://github.com/thedignityofcoffee.png',
+    name: 'thedignityofcoffee',
+    title: 'Author',
+    links: [
+      { icon: 'github', link: 'https://github.com/thedignityofcoffee' },
+    ]
+  },
+  {
+    avatar: 'https://github.com/A-n-k-a.png',
+    name: 'Anka',
+    title: 'Contributor & Tech Support',
+    links: [
+      { icon: 'github', link: 'https://github.com/A-n-k-a' }
+    ]
+  }
+]
+</script>
+
+<div style="margin-top: 3rem;"></div>
+
+<div class="team-section">
+
+# Contributors
+
+Feel free to reach out!
+
+<VPTeamMembers size="small" :members="members" />
+
+</div>
