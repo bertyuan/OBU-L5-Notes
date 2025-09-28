@@ -66,7 +66,7 @@ const members = [
 
 <div class="team-section">
 
-# Contributors
+<h1>Contributors</h1>
 
 Feel free to reach out!
 

@@ -1,7 +1,8 @@
 # Databases
 
 > [!info]
-> Maged Refat Fakirah maged@zy.cdut.edu.cn
+> Maged Refat Fakirah  
+> Email: maged@zy.cdut.edu.cn
 
 > [!warning]
 > - Coursework1 20% Week7 14th Nov. 2025, Friday at 13:00

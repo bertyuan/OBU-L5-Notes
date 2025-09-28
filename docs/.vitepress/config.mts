@@ -4,6 +4,11 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Notes",
   description: "OBU SE Level 5",
+
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
