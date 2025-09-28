@@ -170,7 +170,7 @@ Graphical User Interfaces (GUIs) share common features that make them user-frien
 - **Augmented Reality (AR) and Virtual Reality (VR) Interfaces** - Microsoft HoloLens (AR), Oculus Rift (VR)
 ### Why study HCI? Why does it matter?
 Example: door handles  
-![](img/Pasted_image_20250926111058.png)
+![](./img/hci-img1.png)
 - The door handle should be designed to be comfortable and intuitive to use. It should not cause discomfort or confusion.
 - The door handle should be accessible to people of different heights, ages, and physical abilities. It should be easy to reach and operate for everyone, including those with disabilities.
 - if the door handle is locked or needs a specific action (like pushing instead of pulling), it should communicate this information clearly. This can be done through visual cues or tactile feedback.
