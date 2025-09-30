@@ -631,7 +631,7 @@ puts(str);
 ```
 Will display: `Hello`  
 Here, `str` is a **pointer/memory address!**  
-![](Pasted_image_20250929114054.png)
+![](./img/sdwcacpp-img1.png)
 
 ---
 - `char str[6] = “Hello”;` is allowed.
