@@ -8,17 +8,9 @@ hero:
   tagline: '2025 Fall Semester'
   actions:
     - theme: brand
-      text: SdwCaCPP
-      link: /SdwCaCPP-Notes
-    - theme: brand
-      text: DB
-      link: /DB-Notes
-    - theme: brand
-      text: HCI
-      link: /HCI-Notes
-    - theme: brand
-      text: IPD
-      link: /IPD-Notes
+      text: View Notes
+      link: /notes/SdwCaCPP/Week1
+      type: primary
 
 
 features:

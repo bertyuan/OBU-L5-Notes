@@ -19,12 +19,42 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: "Level 5",
+        text: "SdwCaCPP",
+        collapsed: false,
         items: [
-          { text: "SdwCaCPP", link: "/SdwCaCPP-Notes" },
-          { text: "DB", link: "/DB-Notes" },
-          { text: "HCI", link: "/HCI-Notes" },
-          { text: "IPD", link: "/IPD-Notes" },
+          { text: "Module Brief", link: "/notes/SdwCaCPP/Module-Brief.md" },
+          { text: "Week 1", link: "/notes/SdwCaCPP/Week1.md" },
+          { text: "Week 2", link: "/notes/SdwCaCPP/Week2.md" },
+        ],
+      },
+
+      {
+        text: "DB",
+        collapsed: false,
+        items: [
+          { text: "Module Brief", link: "/notes/DB/Module-Brief.md" },
+          { text: "Week 1", link: "/notes/DB/Week1.md" },
+          { text: "Week 2", link: "/notes/DB/Week2.md" },
+        ],
+      },
+
+      {
+        text: "HCI",
+        collapsed: false,
+        items: [
+          { text: "Module Brief", link: "/notes/HCI/Module-Brief.md" },
+          { text: "Week 1", link: "/notes/HCI/Week1.md" },
+          { text: "Week 2", link: "/notes/HCI/Week2.md" },
+        ],
+      },
+
+      {
+        text: "IPD",
+        collapsed: false,
+        items: [
+          { text: "Module Brief", link: "/notes/IPD/Module-Brief.md" },
+          { text: "Week 1", link: "/notes/IPD/Week1.md" },
+          { text: "Week 2", link: "/notes/IPD/Week2.md" },
         ],
       },
     ],
@@ -48,4 +78,5 @@ export default defineConfig({
   },
 
   lastUpdated: true,
+  
 });
