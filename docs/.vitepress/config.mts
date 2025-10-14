@@ -13,10 +13,10 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "SdwCaCPP", link: "/SdwCaCPP-Notes" },
-      { text: "DB", link: "/DB-Notes" },
-      { text: "HCI", link: "/HCI-Notes" },
-      { text: "IPD", link: "/IPD-Notes" },
+      { text: "SdwCaCPP", link: "/notes/SdwCaCPP/Module-Brief" },
+      { text: "DB", link: "/notes/DB/Module-Brief" },
+      { text: "HCI", link: "/notes/HCI/Module-Brief" },
+      { text: "IPD", link: "/notes/IPD/Module-Brief" },
     ],
 
     sidebar: [
@@ -34,6 +34,7 @@ export default defineConfig({
           { text: "Week 1 Seminar", link: "/notes/SdwCaCPP/Week1-seminar.md" },
           { text: "Week 2 Lecture", link: "/notes/SdwCaCPP/Week2.md" },
           { text: "Week 2 Seminar", link: "/notes/SdwCaCPP/Week2-seminar.md" },
+          { text: "Week 3 Lecture", link: "/notes/SdwCaCPP/Week3.md" },
         ],
       },
 
@@ -44,6 +45,7 @@ export default defineConfig({
           { text: "Module Brief", link: "/notes/DB/Module-Brief.md" },
           { text: "Week 1", link: "/notes/DB/Week1.md" },
           { text: "Week 2", link: "/notes/DB/Week2.md" },
+          { text: "Week 3", link: "/notes/DB/Week3.md" },
         ],
       },
 
@@ -64,6 +66,7 @@ export default defineConfig({
           { text: "Module Brief", link: "/notes/IPD/Module-Brief.md" },
           { text: "Week 1", link: "/notes/IPD/Week1.md" },
           { text: "Week 2", link: "/notes/IPD/Week2.md" },
+          { text: "Week 3", link: "/notes/IPD/Week3.md" },
         ],
       },
     ],
