@@ -349,11 +349,14 @@ Here, `str` is a **pointer/memory address!**
 - `char str[6] = “Hello”;` is allowed.
 - This allocates enough memory to store “Hello\0” and stores the **starting address** in str.
 - However, `str = “Hello”` does not work!
+
 ## Strings in C: Copying
+
 ```c
 char name[20];
 name[20] = “Bob”;
 ```
+
 Why doesn’t this work?
 > ➢ Machine code has no way to handle variable length strings.  
 > ➢ Every time you work with a string, the compiler has to insert machine code loops to manage them character by character.

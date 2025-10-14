@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: View Notes
-      link: /notes/SdwCaCPP/Week1
+      link: /notes/start.md
       type: primary
 
 
