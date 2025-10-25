@@ -74,13 +74,13 @@ export default defineConfig({
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/thedignityofcoffee/OBU-L5-Notes",
+        link: "https://github.com/bertyuan/OBU-L5-Notes",
       },
     ],
 
     editLink: {
       pattern:
-        "https://github.com/thedignityofcoffee/OBU-L5-Notes/edit/main/docs/:path",
+        "https://github.com/bertyuan/OBU-L5-Notes/edit/main/docs/:path",
       text: "Edit this page on GitHub",
     },
 

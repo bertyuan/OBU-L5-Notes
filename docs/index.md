@@ -36,11 +36,11 @@ import { VPTeamMembers } from 'vitepress/theme'
 
 const members = [
   {
-    avatar: 'https://github.com/thedignityofcoffee.png',
-    name: 'thedignityofcoffee',
+    avatar: 'https://github.com/bertyuan.png',
+    name: 'bertyuan',
     title: 'Author',
     links: [
-      { icon: 'github', link: 'https://github.com/thedignityofcoffee' },
+      { icon: 'github', link: 'https://github.com/bertyuan' },
     ]
   },
   {
