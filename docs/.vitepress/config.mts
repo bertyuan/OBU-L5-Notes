@@ -30,11 +30,18 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: "Module Brief", link: "/notes/SdwCaCPP/Module-Brief.md" },
+          { text: "Coursework 1", link: "/notes/SdwCaCPP/Coursework1.md" },
           { text: "Week 1 Lecture", link: "/notes/SdwCaCPP/Week1.md" },
           { text: "Week 1 Seminar", link: "/notes/SdwCaCPP/Week1-seminar.md" },
           { text: "Week 2 Lecture", link: "/notes/SdwCaCPP/Week2.md" },
           { text: "Week 2 Seminar", link: "/notes/SdwCaCPP/Week2-seminar.md" },
           { text: "Week 3 Lecture", link: "/notes/SdwCaCPP/Week3.md" },
+          { text: "Week 3 Seminar", link: "/notes/SdwCaCPP/Week3-seminar.md" },
+          { text: "Week 4 Lecture", link: "/notes/SdwCaCPP/Week4.md" },
+          { text: "Week 4 Seminar", link: "/notes/SdwCaCPP/Week4-seminar.md" },
+          // { text: "Week 5 Lecture", link: "/notes/SdwCaCPP/Week5.md" },
+          // { text: "Week 5 Seminar", link: "/notes/SdwCaCPP/Week5-seminar.md" },
+          // { text: "Week 6 Lecture", link: "/notes/SdwCaCPP/Week6.md" },
         ],
       },
 
