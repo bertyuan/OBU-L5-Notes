@@ -40,6 +40,7 @@ In the current system, there is a `Person` class with some basic properties and 
 
 The features of the `Student` class  
 `Student` 类的特性  
+
 - A property `major`, indicating what major the student is studying.
 - 一个属性 `major`，表示学生所学的专业。
 - A property `level`, indicating which level the student is.
@@ -55,6 +56,7 @@ The features of the `Student` class
 
 The features of the `Teacher` class  
 `Teacher` 类的属性  
+
 - A property `department`, indicating which department the teacher belongs to.
 - 一个属性 `department`，表示教师所属的部门。
 - A property `bookNumber`, indicating the number of books the teacher borrowed. It should not exceed 5 as the maximum number.
@@ -73,6 +75,7 @@ In the current system, there is a `Book` class with some basic properties and me
 
 The features of the `ProfessionalBook` class  
 `ProfessionalBook` 类的特性  
+
 - A property `field`, indicating what field the book belongs to.
 - 一个属性 `field`，表示书籍所属的领域。
 - A method `displayInfo()` inherited to show basic information of the professional book.
@@ -82,6 +85,7 @@ The features of the `ProfessionalBook` class
 
 The features of the `Novel` class  
 `Novel` 类的特性  
+
 - A property `genre`, indicating what genre the book is.
 - 属性 `genre`，指示书籍所属的类型。
 - A method `displayInfo()` inherited to show basic information of the novel book.
@@ -96,6 +100,7 @@ In the current system, there is a `LibrarySpace` class with some basic propertie
 
 The features of the `BookRoom` class  
 `BookRoom` 类的功能  
+
 - A property `category`, indicating what kind of books are stored in the room.
 - 属性 `category`，指示房间中存储的书籍类型。
 - A method `displayInfo()` inherited to show basic information of the book room.
@@ -105,6 +110,7 @@ The features of the `BookRoom` class
 
 The features of the `ReadingRoom` class  
 `ReadingRoom` 类的特性  
+
 - A property `multiFunction`, indicating whether the reading room is a multi-function space or not.
 - 属性 `multiFunction`，表示阅读室是否为多功能空间。
 - A method `displayInfo()` inherited to show basic information of the reading room.
@@ -125,6 +131,7 @@ The features of the `ReadingRoom` class
 
 Please complete the main program to make it a meaningful program by following the instructions.  
 请根据以下说明完成主程序，使其成为一个有意义的程序。  
+
 - Create at least 3 student objects, and the basic information of one of the students should be your own basic information.
 - 创建至少 3 个学生对象，其中至少一个学生的基本信息应为你自己的基本信息。
 - Create at least 2 teacher objects, and the basic information of one of the teachers should be a real one of your instructors.
@@ -142,6 +149,7 @@ Please complete the main program to make it a meaningful program by following th
 
 Apply operational procedures to ensure the effective functionality of the created object.  
 将操作程序应用于确保创建的对象有效运行。  
+
 - Allocate books of different categories to their corresponding book rooms.
 - 将不同类别的书籍分配到相应的书库。
 - Verify that the teachers and students can borrow the books successfully, and that the relevant information is displayed properly.
@@ -201,11 +209,11 @@ The Code should be your own work and must not be copied from the internet or any
 
 - Understand the fundamental concepts of C and C++ programming for object manipulation, data structuring and input/output control.
 - 理解 C 和 C++编程的基本概念，包括面向对象操作、数据结构和输入/输出控制。
--  Refine a problem specification into a collection of C++ classes.
+- Refine a problem specification into a collection of C++ classes.
 - 将问题规范细化为一系列 C++类。
--  Create a software artifact specified in terms of C++ objects and their interrelations.
+- Create a software artifact specified in terms of C++ objects and their interrelations.
 - 创建一个以 C++对象及其相互关系为规范的软件工件。
--  Research the techniques for safe and efficient programming in C and C++.
+- Research the techniques for safe and efficient programming in C and C++.
 - 研究 C 和 C++中安全高效编程的技术。
 
 ## Warm Tips
@@ -215,6 +223,7 @@ The Code should be your own work and must not be copied from the internet or any
 如果使用 `add_executable(${name} ${file})`，会为每个 cpp 文件单独生成一个可执行文件（比如 main.cpp 只会和 main.cpp 一起编译，BookRoom.cpp 只会和 BookRoom.cpp 一起编译），而不是把所有相关的 cpp 文件一起编译成一个可执行文件。这会导致 main.cpp 链接不到其它类的实现，出现 undefined symbol 错误。  
 正确做法：  
 把所有 CHC5028_Coursework1 目录下的 cpp 文件和 main.cpp 一起编译成一个可执行文件。例如：
+
 ```cmake
 add_executable(main
     CHC5028_Coursework1/main.cpp

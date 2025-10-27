@@ -1,26 +1,32 @@
 # Module Brief
 
 ## Module Hours
+
 - Credits:  15
 - Contact Hours:  36
-    - Lectures  24
-    - Seminars  12
+  - Lectures  24
+  - Seminars  12
 - Independent study hours:  114
-    - Directed/independent study  84
-    - Preparation for assessments  30
+  - Directed/independent study  84
+  - Preparation for assessments  30
 - Total learning hours:  150
 
 ## Assessment
+
 Two assessments at end of semester  
+
 - Group Coursework (50%)  
 - Individual Class test (50%)
 
 Textbooks:
+
 - Designing the User Interface Strategies (Shneiderman et al.)
 - Interaction Design Beyond Human-Computer Interaction (Preece et al.)
 
 ## Timetable
+
 Every week:  
+
 - 2 hour lecture
 - 1 hour practical
 

@@ -1,6 +1,7 @@
 # Week 3 - XPATH
 
 ## Table of content
+
 - Review Week2 Tutorial
 - Look at some aspects of XML
 - Namespaces
@@ -18,15 +19,20 @@
 ```xml
 <outerElement xmlns:events="URL" xmlns:graphics="URL">
 ```
+
 - You can now use 'events' and 'graphics' prefixes:
+
 ```xml
 <events:title>Content</events:title>
 ```
+
 and
+
 ```xml
 <graphics:title>Content</graphics:title>
 ```
-- URL example: https://www.cdut.edu.cn/nm/week3
+
+- URL example: <https://www.cdut.edu.cn/nm/week3>
 
 ### Namespaces Types
 
@@ -39,25 +45,27 @@ and
 ## DOM
 
 - Document Object Model (DOM):
-    - Originally developed for HTML. Supported by most browsers.
-    - Represents the content of the XML or HTML document as a tree structure.
-    - Using DOM, we can easily read and update the contents of the document.
+  - Originally developed for HTML. Supported by most browsers.
+  - Represents the content of the XML or HTML document as a tree structure.
+  - Using DOM, we can easily read and update the contents of the document.
 
 ![](../../img/db-img8.png)
 
-- Online DOM viewer: https://software.hixie.ch/utilities/js/live-dom-viewer/
+- Online DOM viewer: <https://software.hixie.ch/utilities/js/live-dom-viewer/>
 
 ## XPATH
+
 - What is Xpath?
-    - Allows us to use path expressions to navigate an XML document.
-    - It allows us to select only the nodes we're interested in.
+  - Allows us to use path expressions to navigate an XML document.
+  - It allows us to select only the nodes we're interested in.
 - So its:
-    - Expression language.
-    - Contains some standard functions.
-    - Non-XML.
+  - Expression language.
+  - Contains some standard functions.
+  - Non-XML.
 - XSLT relies heavily on the use of XPath to navigate a document, and find relevant nodes.
 
 ### XPATH Tree Structure
+
 - Xpath works on the following kinds of nodes
 
 ![](../../img/db-img9.png)
@@ -66,6 +74,7 @@ and
 > sibling: <正式>兄弟姐妹
 
 ### Using XPATH
+
 - Xpath works on the following kinds of nodes
 
 ![](../../img/db-img10.png)
@@ -77,14 +86,17 @@ and
 | - If your location path starts with the root node or a forward slash (/) you are using an absolute location path<br>- e.g. `/bookstore/book[2]/author` | - If your location path begins with the name of a descendant, you're using a relative location path.<br>- Less complex than the absolute path.<br>- e.g. `//*/book[2]/author` |
 
 ### Xpath tools online
-- https://www.easycodeforall.com/generate-xpath.html
-- http://xpather.com/
+
+- <https://www.easycodeforall.com/generate-xpath.html>
+- <http://xpather.com/>
 
 ### Preparing Notpad++
+
 ![](../../img/db-img11.png)
 ![](../../img/db-img12.png)
 
 ### Some key XPath expressions
+
 - Xpath works on the following kinds of nodes
 
 | Expression | Description                                                                                           |
@@ -111,9 +123,11 @@ and
 | //@lang         | Selects all attributes that are named lang                                                                                                    |
 
 ### Namespaces Xpath Examples
+
 ![](../../img/db-img13.png)
 
 ### Predicates
+
 ![](../../img/db-img14.png)
 
 ### Predicates examples
@@ -133,10 +147,11 @@ and
 `//Actor [@gender='male’]`  
 `//Movie[2]/Top_Cast/Actor[@gender='male’]`  
 `//Movie[2]/Top_Cast/Actor[last()]/.`  
-*`//Actress[text()='Takayo Fischer’]`*  
-*`/Movies/Movie[2]/Top_Cast/Actress [@gender='female'][last()-1]`*  
+_`//Actress[text()='Takayo Fischer’]`_  
+_`/Movies/Movie[2]/Top_Cast/Actress [@gender='female'][last()-1]`_  
 
 ### XPATH Axes
+
 - An Axes represents a relationship to the current node on the tree.
 
 | AxisName           | Result                                                                                                                       |

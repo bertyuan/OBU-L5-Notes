@@ -19,9 +19,11 @@ Return_type/void function_name(Arg_List){
 Function body;
 }
 ```
+
 `Arg_List` is a comma separated list of arguments.  
 
 Example:
+
 ```c
 int TestFunction(int x){
 return x+1;
@@ -33,14 +35,17 @@ return x+1;
 - Parameters: 形式参数
 - Arguments: 实际参数
 
-
 In C and C++ there are two methods of passing parameters to a function.
+
 1. Pass by value:
-  - A copy of the parameter is passed to the function.
-  - The parameter itself **cannot be modified** within the function.
+
+- A copy of the parameter is passed to the function.
+- The parameter itself **cannot be modified** within the function.
+
 2. Pass by reference:
-  - *Memory address* of the parameter is passed.
-  - The parameter **can be modified** within the function.
+
+- *Memory address* of the parameter is passed.
+- The parameter **can be modified** within the function.
 
 ## A function example in C: Pass by value
 
@@ -92,10 +97,12 @@ memory for the variable.
 The process of using value and reference types is hidden in Java, but is explicit in C (and in C++ to a lesser extent)
 
 You have already used this when you call `scanf` in C.  
+
 ```c
 int number;
 scanf(“%i”,&number);
 ```
+
 The `&` operator gives the address of the named variable.  
 
 You need to provide the address to `scanf` so it can update the contents of the variable `number`.  
@@ -143,9 +150,11 @@ void addOneTo(uint16_t *x) {
 }
 ```
 
-This shows how you can write a function that updates its parameter, like `scanf`. 
-- `uint16_t *x` declares that <span style="color: red">x</span> holds <span style="color: red">the address of</span> a 16-bit unsigned integer (this is called a <span style="color: red">pointer</span>) 
+This shows how you can write a function that updates its parameter, like `scanf`.
+
+- `uint16_t *x` declares that <span style="color: red">x</span> holds <span style="color: red">the address of</span> a 16-bit unsigned integer (this is called a <span style="color: red">pointer</span>)
 - `*x` tells C to go to the address stored in <span style="color: red">x</span> and read or update the value there.
+
 <p style="text-align:center;">This is called <span style="color: red">dereferencing（解除引用）</span></p>
 
 ```c
@@ -236,6 +245,7 @@ int main() {
 ```
 
 Note the difference
+
 ```cpp
 #include <iostream>
 using namespace std;
@@ -258,9 +268,11 @@ int main() {
 <span style="color: red">Where is the “123” in memory?</span>
 
 ---
+
 - Danger awaits those who incautiously use pointers.
 - When you create a pointer in C++, <span style="color: red">the computer allocates memory to hold an address, but it does not allocate memory to hold the data to which the address points.</span>
 - Creating space for the data involves a separate step. Omitting that step, as in the above, is an invitation to disaster.
+
 ```cpp
 int main() {
     int *p = new int;
@@ -269,6 +281,7 @@ int main() {
     return 0;
 }
 ```
+
 <span style="color: red">Thinking Question: Ok or not? Why?</span>
 
 ```console
@@ -279,6 +292,7 @@ int main() {
 `int *p = new int;`: 请求分配一块内存给变量（此变量只有指针，没有变量名）
 
 ---
+
 - The `<<` operator in C++ (as in `cin >> name`) works like this. It is declared to accept a reference, so you do not have to write `&name;` C++ <span style="color: red">automatically</span> passes in the address because it knows `<<` accepts a reference.
 - Using this syntax can help prevent mistakes.
 - However, it also hides what is going on.
@@ -296,13 +310,15 @@ Now, the difference between \* and &:
 
 `uint16_t scores[20];`  
 The C compiler will:
+
 - Look at the size of the array (20) and the size of the type you asked for. Then multiply these together to get a total size for the array.
 - Reserve that much memory in the static data area of the program and store the address of this memory.
 - Treat anything mentioning the variable <span style="color: #8B0000">scores</span> as meaning that <span style="color: red">address</span>.
 
-## Arrays: watch out!
+## Arrays: watch out
 
 `uint16_t scores[20];`
+
 - `scores[0]` will give a uint16
 - ...
 - `scores[19]` will give a uint16
@@ -328,24 +344,30 @@ int main() {
 
 ## Strings in C
 
-- In C, a string is just <span style="color: red">an array of characters</span>. 
+- In C, a string is just <span style="color: red">an array of characters</span>.
     `char name[20];`
 - Note that since it is an array, you <span style="color: red">must</span> specify a maximum length.
 - The actual length of the string is <span style="color: #8B0000">not stored directly!</span>
+
 ---
+
 - To mark the actual length of the string, C inserts a Null character (ASCII 0) in the array after the last character.
 - This means that `name[20]`can actually store only up to 19 characters because there must be a room for the Null character.
 - When inputting a string using `scanf`, it is important to restrict the length that can be input to ensure there is no attempt to store a longer string than the array can hold.
+
 ---
+
 ```c
 char str[6] = “Hello”;
 puts(str);
 ```
+
 Will display: `Hello`  
 Here, `str` is a **pointer/memory address!**  
 ![](../../img/sdwcacpp-img1.png)
 
 ---
+
 - `char str[6] = “Hello”;` is allowed.
 - This allocates enough memory to store “Hello\0” and stores the **starting address** in str.
 - However, `str = “Hello”` does not work!
@@ -397,7 +419,9 @@ Why does this always print “I don’t know you”, even if you type “Bob”?
 - Again, to compare strings the function `strcmp` is provided. This encapsulates the loop necessary to compare the strings.
 - Also, it returns 0 if the strings match which must be allowed for in the if statement.
 - `if (strcmp(“Bob”,name) == 0) {`
+
 ### C string functions
+
 - `strcpy(a,b)`
     Copy string from b to a.
 - `strncpy(a,b,n)`
@@ -416,11 +440,11 @@ strcpy(phrase,”Hello There”);
 
 - Suppose we now wanted to modify <span style="color: red">phrase</span> so that it contains “Hello Chris”.
 - We could <span style="color: red">strcpy</span> the whole phrase into the array, overwriting the previous one.
-- But we can also do: 
+- But we can also do:
     `strcpy(phrase+6,”Chris”);`
-- A preferable syntax for this is 
+- A preferable syntax for this is
     `strcpy(&phrase[6],”Chris”);`
-- Phrase holds an address. At that address are stored the bytes 
+- Phrase holds an address. At that address are stored the bytes
     `H e l l o <spc> …`
 - Thus, moving the address on by 6 bytes will reach the address where `T h e r e` is stored. And we can copy “Chris” into this address.
 
@@ -434,6 +458,7 @@ strcpy(phrase,”Hello There”);
 ### C++ string methods
 
 `string s;`
+
 - `s.length()`
     Gives length of the string.
 - `s.append(“test”)`
@@ -454,7 +479,7 @@ strcpy(phrase,”Hello There”);
 ## C++ string and C strings
 
 - Every C++ string contains an embedded C-style string (array of characters) which you can access as `s->data`.
-- In C++, you can turn a C-string into a C++ string by wrapping it in a string object: 
+- In C++, you can turn a C-string into a C++ string by wrapping it in a string object:
     `string cppstring(cstring);`  
     or  
     `string* cppstring = new string(cstring);`  

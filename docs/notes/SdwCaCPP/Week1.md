@@ -1,6 +1,6 @@
 # Week 1 - C&C++ basics
 
-## A basic C program:
+## A basic C program
 
 ```c
 #include <stdio.h>
@@ -10,7 +10,6 @@ int main(){
   return 0;
 }
 ```
-
 
 `#include` in C resembles import in Java or Python, except that the imported material is a header file; what this means will be discussed later.  
 
@@ -26,12 +25,10 @@ The syntax for defining a function is the same as a method in Java but without t
 
 The `main` function is the main program. It returns an `int`, which is returned to the operating system.
 
-`puts` is the C function to output a string. (It’s part of stdio, that’s why we imported it.)   
+`puts` is the C function to output a string. (It’s part of stdio, that’s why we imported it.)
 `\n` at the end of the string represents the byte sent to the OS to tell it to move to the next line.
 
-
-
-## The same in c++:
+## The same in c++
 
 ```cpp
 #include <iostream>
@@ -44,15 +41,14 @@ int main() {
 }
 ```
 
-## C++ differences:
+## C++ differences
 
 - The `.h` can be left off the import. Traditionally built-in C++ libraries have no file extension.
 - Instead of using the `stdio` library, we use the `iostream` library and `stream output` operators.
 - These are a C++ addition that simplifies output but also makes the syntax more abstract.
 - This is a good example of the difference in style between C and C++.
 
-
-## A simple loop:
+## A simple loop
 
 ```c:line-numbers
 #include <stdio.h>
@@ -78,14 +74,12 @@ As mentoned before, the `for` syntax in C and C++ is identical to Java. (Java co
 The `printf` (print formatted) function is used to print out strings containing numbers or other material.  
 Also note the type declaration is unusual.
 
-
 ## Type declarations in C
 
 - In the original C, the types used were the same as in Java – `int`, `float`, etc.
 - However, unlike Java, C compiles right down to machine code – and different computers have different abilities to handle numbers in machine code.
 
 - This caused confusion with int meaning different things and having different properties based on the machine being compiled on. As a result, in 1999 the types were respecified to allow the programmer to specify exactly how the computer should store the number.
-
 
 ## Integer standard types
 
@@ -104,13 +98,11 @@ Also note the type declaration is unusual.
 - However, smaller embedded systems may only be able to deal with 16-bit or even 8-bit numbers directly in their machine code.
 - Managing larger numbers on these systems requires the compiler to include extra code to transfer carry, etc, information between parts of the number.
 
-
-## Relative types:
+## Relative types
 
 `(U)Int_leastX_t`: declares the variable must have at least X bits but may have more. This is used to allow for systems with machine code that may no longer handle smaller numbers.
 
 `(U)Int_fastX_t`: declares the variable must have at least X bits and should be “fast” on the platform being used. The precise meaning of this is not defined but compilers are supposed to select a type native to the CPU’s code. ---*Rarely used*.
-
 
 ## `Printf`
 
@@ -124,7 +116,7 @@ what you want to print.
 - You add “slots” into it with `%i` (or other markers we’ll see later), then fill
 them in.
 
-## The loop in C++:
+## The loop in C++
 
 ```cpp:line-numbers
 #include <iostream>
@@ -138,8 +130,9 @@ return 0;
 }
 ```
 
-The code is mostly the same as in C except we are using the iostream facilities C++ provides.   
+The code is mostly the same as in C except we are using the iostream facilities C++ provides.
 This is cleaner than printf:
+
 ```cpp
 cout << "You have " << dogs << " dogs and " << cats << " cats." << endl;
 ```
@@ -182,10 +175,10 @@ return 0;
 }
 ```
 
-
 ::: details See the output
 The output is:
-```
+
+```txt
 0
 0
 null
@@ -195,6 +188,7 @@ null
 4
 2
 ```
+
 :::
 
 ## Input

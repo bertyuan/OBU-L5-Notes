@@ -3,34 +3,46 @@
 ---
 
 - Module Admin
-    - Student Website
-    - Assessment
+  - Student Website
+  - Assessment
 - Basic Concepts:
-    - Interfaces, GUIs, Prototyping
-    - Interaction styles
-    - Usability, usability factors
-    - Designing an interface
-    - Problems with designing interfaces
-    - User-Centered Design
+  - Interfaces, GUIs, Prototyping
+  - Interaction styles
+  - Usability, usability factors
+  - Designing an interface
+  - Problems with designing interfaces
+  - User-Centered Design
 
 ## Exercise: Research
+
 - Research meaning of
-    - Prototype
-    - Interface
+  - Prototype
+  - Interface
 - What do they mean together?
+
 ## Definition: Prototype
+
 - A prototype is an early sample, model, or version of a product built to test an idea or process
 - If you try to build something you learn from it
+
 ## Definition: Interface
+
 - Interface: 1st point of contact between human and computer
 - A point where two systems, things or organizations meet and interact
 - Who can give me an example?
+
 ## Definition: User Interface (UI)
+
 A user interface (UI) is the means through which a user interacts with a computer program, website, or other digital device or system. It encompasses all the elements and components that enable users to communicate with and control the software or hardware.
+
 ## Definition: Graphical User Interface (GUI)
+
 This is the most common type of user interface and is characterized by visual elements such as windows, icons, buttons, and menus. GUIs are common in operating systems (e.g., Windows, macOS, Linux) and many software applications.
+
 ### Features of a GUI
+
 Graphical User Interfaces (GUIs) share common features that make them user-friendly and efficient for interacting with software and digital systems.
+
 - **Windows**: GUIs often use windows as a fundamental component to display information and application content. Users can open, close, minimize, maximize, and arrange windows as needed.
 - **Example**: In Microsoft Windows, you can have multiple application windows open simultaneously, such as a web browser window, a word processor window, and a file explorer window
 - **Icons**
@@ -40,39 +52,53 @@ Graphical User Interfaces (GUIs) share common features that make them user-frien
 - **Dialog Boxes**
 - **Text Input Fields**
 - **Scrollbars**
+
 ### Why Use GUIs?
+
 - The human brain can understand, remember, and recall graphical information better than text
 - Gives a feeling of being in control of the  application
-    - Instant visual feedback
-    - GUIs support many instances of direct  manipulation
+  - Instant visual feedback
+  - GUIs support many instances of direct  manipulation
 - Reduces learning time (compared to text-based interfaces)
+
 ## Other Interaction Styles – apart from GUIs
+
 - **Command-Line Interface (CLI)** - Unix/Linux
 - **Voice User Interface (VUI)** - Amazon Echo (Alexa), Google Assistant, Siri
 - **Touchscreen Interface** - Apple iPhone, Android Smartphones
 - **Web User Interface (WUI)** - Baidu
 - **Augmented Reality (AR) and Virtual Reality (VR) Interfaces** - Microsoft HoloLens (AR), Oculus Rift (VR)
+
 ## Why study HCI? Why does it matter?
+
 Example: door handles  
 ![](../../img/hci-img1.png)
+
 - The door handle should be designed to be comfortable and intuitive to use. It should not cause discomfort or confusion.
 - The door handle should be accessible to people of different heights, ages, and physical abilities. It should be easy to reach and operate for everyone, including those with disabilities.
 - if the door handle is locked or needs a specific action (like pushing instead of pulling), it should communicate this information clearly. This can be done through visual cues or tactile feedback.
+
 ---
+
 - Users should be able to figure out how to use the door handle quickly, without the need for lengthy instructions. The design should be intuitive, so users can learn how to use it through natural interaction.
 - Making sure it doesn't easily get stuck or jammed. If there is an error, such as the handle not turning, there should be a way for users to resolve the issue easily.
 - Opening the door should not require excessive force or multiple attempts. A well-designed handle should allow users to open the door with minimal effort and time
+
 ## Usability
+
 - Good design makes things easier to use.
-    - if something is easy to use, it has good usability
+  - if something is easy to use, it has good usability
 - Good usability
-    - prevents errors
-    - allows tasks to be accomplished faster, more  effectively, more enjoyably, and more safely
-    - requires less training, and less memory load
-    - is comfortable to use, and lets the user feel more  in control
-    - is commercially more profitable
+  - prevents errors
+  - allows tasks to be accomplished faster, more  effectively, more enjoyably, and more safely
+  - requires less training, and less memory load
+  - is comfortable to use, and lets the user feel more  in control
+  - is commercially more profitable
+
 ## Usability factors
+
 Usability can be classified using guiding principles and heuristics concerning factors like these:
+
 - *Efficiency*: speed of performance
 - *Simplicity*: incidence of errors
 - *Satisfaction*: e.g. ability to recover from errors
@@ -80,10 +106,14 @@ Usability can be classified using guiding principles and heuristics concerning f
 - *Memorability*: ease of retention of learned skills
 - *Personalization*: ability to customize
 - *Effectiveness*: Ease with which users can achieve tasks
+
 ---
+
 - Question: which factor would be less important for an application like a calendar, which is used daily? How could personalization be applied in a travel planner?
 - Could be aesthetic, However, Users prioritize features that make it easy to schedule and manage their appointments, events, and tasks efficiently.
+
 ## HCI Design should include and support
+
 - Learning by exploration
 - Representation of the user’s conceptual objects as identifiable objects at the interface
 - Continuous visual feedback
@@ -92,7 +122,9 @@ Usability can be classified using guiding principles and heuristics concerning f
 - Shortcuts for the experienced user
 - Context sensitive help
 - Little knowledge needed of the underlying system
+
 ## Problems Faced in Designing Interfaces
+
 - **User Complexity**: Users have diverse backgrounds, skills, and preferences. Designers must create interfaces that accommodate both novice and experienced users
 - **Usability Issues**: Common usability problems include poor navigation, unclear labels, and complex workflows that confuse users
 - **Accessibility**: Meeting accessibility standards can be complex and requires careful consideration.
@@ -103,7 +135,9 @@ Usability can be classified using guiding principles and heuristics concerning f
 - **Content Strategy**: Organizing and presenting content effectively can be challenging,.
 - **Legal and Ethical Considerations**: Compliance with data protection laws
 - **Future-Proofing**: Technology evolves rapidly.
+
 ## Four Principles of User-Centred Design
+
 1. Early and continual focus on users
     - Define a major group of potential users (if you can)
     - Talk to them about good and bad points of their present job and / or system.
@@ -142,31 +176,41 @@ Usability can be classified using guiding principles and heuristics concerning f
             - importance of good software tools
         - A willingness to make changes
             - importance of managing for change
+
 ## Reasons for using User-Centered Design
+
 - It takes the ‘unknown’ out of the design, you  can see exactly how users will use it
-    - e.g. when designing communication and discourse  you can see exactly how the user interacts with it.
+  - e.g. when designing communication and discourse  you can see exactly how the user interacts with it.
 - It improves the usability of the system
+
 ## The Communications Problem
+
 - **Misaligned Expectations**: Designers, developers, product managers, and stakeholders, may have varying expectations regarding the interface's features, functionality, and visual design. When these expectations are not clearly communicated and aligned, it can lead to discrepancies in the final product
 - **Unclear Requirements**:
-    - **Ambiguous Feedback**: Feedback provided by stakeholders, users
-    - **Communication Gaps**: If key stakeholders or team members are not included in design discussions. OR Person agreeing the design may not be in touch with the end users.
-    - **Lack of User Involvement**: Users and analysts often do not use the same  language.
+  - **Ambiguous Feedback**: Feedback provided by stakeholders, users
+  - **Communication Gaps**: If key stakeholders or team members are not included in design discussions. OR Person agreeing the design may not be in touch with the end users.
+  - **Lack of User Involvement**: Users and analysts often do not use the same  language.
+
 ## Useful tool: Prototyping
+
 - Enables a designer to create an examinable  model. Prototypes can be used at
-    - Requirements definition phase
-    - Design phase
+  - Requirements definition phase
+  - Design phase
 - Runnable prototypes can be simulations of all or part of the overall design
 - Non-runnable prototypes can be paper based  or computer based (Balsamiq, Pencil , Adobe XD, Figma)
+
 ## We have Learnt
+
 - Interfaces, GUIs, Prototyping
 - Interaction styles
 - Usability, usability factors
 - Designing an interface
 - Problems with designing interfaces
 - User-Centered Design
+
 ## Homework
+
 - Self-reading-test: Chapter 1 (Interaction Design Beyond HCI)
 - Review Assessment document
 - Create groups (4 people max.)
-Topic Selection: https://www.dcode.fr/random-sampling
+Topic Selection: <https://www.dcode.fr/random-sampling>

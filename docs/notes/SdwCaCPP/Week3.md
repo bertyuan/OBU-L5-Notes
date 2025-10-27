@@ -1,20 +1,27 @@
 # Week 3 - Pointers & Structured Data
+
 > [!NOTE]
 > `int`占用4Bytes  
 > 指针占用：  
 > 64位芯片：64bits(8Bytes)  
 > 32位芯片：32bits(4Bytes)  
+
 ## Table of content
+
 - What is Pointer
 - What is Structure
 - Function `malloc()` and `free()`
 - Dynamically allocate memory for array or structure
+
 ## Basic declarations
+
 - Technically every variable declaration works like this.
 - 从技术上讲，每个变量声明都像这样工作。
+
 ```c
 uint32_t val;
 ```
+
 - Allocates memory equal to the size of a `uint32` (4 bytes), and then tells the compiler to treat <span style="color: red">val</span> as reading the value at the allocated address.
 - 分配与 uint32（4 字节）大小相等的内存，然后告诉编译器将 val 视为读取分配地址的值。
 - As we saw last week you can find the address by writing `&val`.
@@ -28,7 +35,9 @@ uint32_t val;
 - 在较老或嵌入式机器上，编译器可能会简单地选择一个尚未使用的地址。
 - On modern multitasking machines the compiler may have to add machine code to ask for memory from the operating system. (Or, more commonly, it will ask for a block of memory as the program starts, then pick unused areas within it.)
 - 在现代多任务机器上，编译器可能需要添加机器代码来向操作系统请求内存。（或者，更常见的是，程序启动时会请求一块内存，然后从中选择未使用的区域。）
+
 ## Declaring pointers
+
 - You can also directly declare variables to hold addresses, but this must be done carefully.
 - 更常见的是，您也可以直接声明变量来存储地址，但必须谨慎操作。
 - `uint32_t *pointer;` creates a variable that will hold an <span style="color: red">address</span> and tells C that when this address is used, its content should be interpreted as a `uint32`.
@@ -55,6 +64,7 @@ char *d;
 double *e;
 float *f;
 ```
+
 > [!IMPORTANT]
 > 不同芯片（64位/32位）中，占用的内存大小不同  
 > 64位(bit): 8bytes  
@@ -67,6 +77,7 @@ float *f;
 - All of these pointers will point to nothing and will cause errors if they are used without initiation.
 - 所有这些指针都将指向空，如果在不初始化的情况下使用它们，将会导致错误。
 type cast 类型转换
+
 > 思考：能否使用类型转换，是否会出现问题
 
 ![](../../img/sdwcacpp-img2.png)  
@@ -74,40 +85,50 @@ type cast 类型转换
 ![](../../img/sdwcacpp-img3.png)
 
 ## Assigning pointers: Transmit
+
 - On a modern system there are <span style="color: red">two ways</span> to get an address value to store in a pointer variable.
 - 在现代系统中，有两种方法可以将地址值存储在指针变量中。
 - <span style="color: red">One is</span> to use the address of an existing variable:
 - 一种方法是使用现有变量的地址：
+
 ```c
 int32_t x = 20;
 int32_t *ptr = &x;
 ```
+
 - In this case, the first declaration will allocate the memory for x. The second declaration will get the address of x and store it in the pointer, so `*ptr` will now access x.
 - 在这种情况下，第一个声明将为 x 分配内存。第二个声明将获取 x 的地址并将其存储在指针中，因此`*ptr`现在将访问 x。
 - This is what we used to allow transput parameters. But it is less useful in other circumstances, since inside the declaring function we can always refer to x instead.
 - 这是我们用来允许传输参数的方式。但在其他情况下，它不太有用，因为在声明函数内部，我们总是可以引用 x。
+
 ## Assigning pointers: Dynamic
+
 - <span style="color: red">The second</span> is to allocate memory ourselves:
 - 第二个是自行分配内存：
+
 ```c
 int32_t *x = (int32_t*) malloc(sizeof(int32_t));
 ```
+
 - The `malloc` function tells the compiler to write any necessary machine code to allocate a block of memory of the size we specify, then return the address of that memory.
 - `malloc` 函数告诉编译器编写必要的机器代码来分配我们指定大小的内存块，然后返回该内存的地址。
 - The `malloc` function allocates <span style="color: red">an appropriate and anonymous block</span> of memory.
 - `malloc` 函数分配一个适当且匿名的内存块。
+
 > `malloc`: memory allocate
 
 > [!IMPORTANT]
 > Manual way
 
 ## Assigning pointers
+
 - We use malloc together with sizeof to allocate the correct amount of memory for an `int32`. We know that it is 4 bytes, so it would be perfectly legal to write `malloc(4)`, but it is more readable and safer to use `sizeof()`.
 - 我们使用 `malloc` 与 `sizeof` 一起为 `int32` 分配正确的内存量。我们知道它是 4 字节，所以写`malloc(4)`是完全合法的，但使用`sizeof()`更易读且更安全。
 - We can then use `*x` freely to access this allocated memory as an `int32`.
 - 然后我们可以自由地使用`*x`来访问这块分配的内存作为`int32`。
 - So we can write `*x = 123`; There will be no error, since the memory has been allocated.
 - 因此我们可以写`*x = 123;`由于内存已经被分配，所以不会有错误。
+
 > Do you remember the same declaration in week2 PPT, which doesn’t work at that time
 > 你还记得 week2 PPT 中的相同声明吗？当时它不起作用
 
@@ -115,22 +136,27 @@ int32_t *x = (int32_t*) malloc(sizeof(int32_t));
 
 This syntax is used in basic C:  
 在基本 C 语言中，使用以下语法：  
+
 ```c
 int32_t *x = (int32_t*) malloc(sizeof(int32_t));
 ```
+
 - <span style="color: red">Thinking question</span>
-    - C can’t accept a dynamic size array before C99(ISO);
-    - C 语言在 C99（ISO）之前不能接受动态大小的数组；
-    - Please use `malloc` to define a dynamic size array;
-    - 请使用 `malloc` 来定义动态大小的数组；
+  - C can’t accept a dynamic size array before C99(ISO);
+  - C 语言在 C99（ISO）之前不能接受动态大小的数组；
+  - Please use `malloc` to define a dynamic size array;
+  - 请使用 `malloc` 来定义动态大小的数组；
+
 ```c
 int *p;
 p = (int *) malloc (n*sizeof(int));
 ```
+
 > `n` is a variable, can be assigned a specific value
 > `n` 是一个变量，可以被分配一个特定的值
 
 ## Manual memory allocation: Release
+
 - When you allocate memory this way, you <span style="color: red">override</span> all of the compiler’s memory management.
 - 当你这样分配内存时，你会覆盖编译器的所有内存管理。
 - In particular, the compiler will no longer check <span style="color: red">scope</span> of variables you allocate this way.
@@ -142,16 +168,20 @@ p = (int *) malloc (n*sizeof(int));
 
 - If you allocated the memory with <span style="color: red">malloc</span>, release it by calling `free` on a correctly typed pointer. (C)
 - 如果使用 `malloc` 分配了内存，请通过在正确类型的指针上调用 `free` 来释放它。（C）
+
 ```c
 free(x);
 free(p);
 ```
+
 - If you allocated the memory with <span style="color: red">new</span>, release it by calling `delete` on a correctly typed pointer. (C++)
 - 如果使用 `new` 分配了内存，请通过在正确类型的指针上调用 `delete` 来释放它。（C++）
+
 ```cpp
 delete x;
 delete p; 
 ```
+
 > Be careful about this
 
 ---
@@ -163,7 +193,8 @@ delete p;
 - The main reason to do this occurs when using structured data.
 - 这样做的主要原因是在使用结构化数据时。
 
-## Difference between a Pointer and a Reference!
+## Difference between a Pointer and a Reference
+
 - A pointer is a <span style="color: red">variable</span> that stores a memory address.
 - 指针是一个存储内存地址的变量。
 - A reference is another name for a variable. It is an alias.
@@ -178,6 +209,7 @@ delete p;
 ---
 
 Example:
+
 ```
 int x = 31;// x declared and assigned 31
 int *p = &x; // p hold the address of x
@@ -188,6 +220,7 @@ x = 51; // Both *p and y are now 51!
 ```
 
 ## Structured data
+
 ```c
 typedef struct {
     char name[20];
@@ -211,6 +244,7 @@ typedef struct {
     uint32_t enrolledYear;
 } student;
 ```
+
 - A struct resembles a class in Java or Python except that it can only have properties (fields), not methods.
 - 一个结构体类似于 Java 或 Python 中的类，但它只能有属性（字段），不能有方法。
 - You cannot restrict access to properties; they are read and written directly.
@@ -229,6 +263,7 @@ int main() {
         john.name, john.enrolledYear);
 }
 ```
+
 - `Student john;` will declare memory equal to the size of a student (24 bytes) and have variable <span style="color: red">john</span> refer to the value stored in this memory.
 - `Student john;` 将声明内存大小等于一个学生的大小（24 字节），并让变量 john 指向这块内存中存储的值。
 - We can access the fields of the student struct using the dot syntax, just as in Python or Java.
@@ -250,11 +285,14 @@ int main() {
 - 它也可能让人困惑，更新 mike 现在对 john 没有任何影响。
 
 ## Structured data and pointers
+
 - Let us now think about an example function that will show why pointers and structured data together are useful.
 - 现在让我们考虑一个示例函数，它将展示为什么指针和结构化数据结合使用是有用的。
 - We want to create a function `enrolStudent(name)` which will create a new student object, with the given name, enrolled in the current year and return it.
 - 我们想要创建一个函数 `enrolStudent(name)`，该函数将创建一个新的学生对象，具有给定的姓名，注册在当前学年，并返回它。
+
 ### `enrolStudent` attempt 1
+
 ```c
 student enrolStudent(char *name) {
     student newStudent;
@@ -263,6 +301,7 @@ student enrolStudent(char *name) {
     return newStudent;
 }
 ```
+
 > <span style="color: red">Why not use</span> `char name[20]`?
 
 - When declaring a string parameter ,we declare it as a pointer to avoid giving a size.
@@ -286,6 +325,7 @@ student enrolStudent(char *name) {
     return newStudent;
 }
 ```
+
 - This function works but is not very efficient.
 - 这个函数可以工作，但效率不高。
 - The student struct created is returned by value. That means that the 24 bytes of the student struct is copied and put on the stack, then copied again into the variable in the main program.
@@ -297,6 +337,7 @@ student enrolStudent(char *name) {
 > Thinking question: How to fix this problem?
 
 ### `enrolStudent` attempt 2
+
 ```c
 student *enrolStudent(char *name) {
     student newStudent {.enrolledYear=2017};
@@ -314,6 +355,7 @@ student *enrolStudent(char *name) {
 - 这个想法在原则上是个好主意，但这个实现存在致命缺陷！为什么？
 
 ### `enrolStudent` attempt 3
+
 ```c
 student *enrolStudent(char *name) {
     student *newStudent = (student *) malloc(sizeof(student));
@@ -322,6 +364,7 @@ student *enrolStudent(char *name) {
     return newStudent;
 }
 ```
+
 - This time we use manual memory allocation (called <span style="color: red">dynamic allocation</span>) to allocate the memory for the `student` struct.
 - 这次我们使用手动内存分配（称为动态分配）来为 `student` 结构体分配内存。
 - This will work. Memory allocated by dynamic allocation is not subject to scoping, so it is not discarded when the function ends. So the calling program can use that `student`.
@@ -335,6 +378,7 @@ student *enrolStudent(char *name) {
 - 括号是必需的：`*newStudent.name` 是不被接受的。为了简化，你也可以使用缩短的语法：`newStudent->name`
 
 ### `enrolStudent` using the real year: a system structure
+
 ```c
 student *enrolStudent(const char *name) {
     student *newStudent = (student *) malloc(sizeof(student));
@@ -345,23 +389,27 @@ student *enrolStudent(const char *name) {
     return newStudent;
 }
 ```
+
 ### Const parameters
+
 - When passing an address to a function, declaring the parameter type as <span style="color: red">const</span> serves as a promise that the function will not change the value stored at that address.
 - 当向函数传递地址时，将参数类型声明为 const 表示函数将不会更改该地址存储的值。
 - In <span style="color: red">enrolStudent</span> we do not need to change <span style="color: red">name</span>, but it is passed by address anyway because it is an array and they are intrinsically address based.
 - 在 `enrolStudent` 函数中，我们不需要更改姓名，但无论如何它都是通过地址传递的，因为它是数组，它们本质上是基于地址的。
-- The promise is enforced by type checking. <span style="color: red">const char *</span> is considered a different type to <span style="color: red">char *</span> and write operations cannot be performed on it. It can also only be passed to other functions that input <span style="color: red">const char *</span> (in other words, that also promise not to change the value)
+- The promise is enforced by type checking. <span style="color: red">const char *</span> is considered a different type to <span style="color: red">char*</span> and write operations cannot be performed on it. It can also only be passed to other functions that input <span style="color: red">const char *</span> (in other words, that also promise not to change the value)
 - 承诺是通过类型检查来强制执行的。`const char *` 被认为是一种与 `char *` 不同的类型，并且不能对其执行写操作。它也只能传递给需要输入 `const char *` 的其他函数（换句话说，它们也承诺不会更改值）
 - Whenever you write a function which obtains a value by address but doesn’t change it, declare the parameter <span style="color: red">const</span> to ensure it can work with <span style="color: red">const</span> values you may obtain from elsewhere.
 - 每次你编写一个通过地址获取值但不更改它的函数时，请将参数声明为 const，以确保它可以与从其他地方获得的 const 值一起工作。
 
 ### `enrolStudent` alternative method
+
 ```c
 void enrolStudent(student *stu, char *name){
     strncpy(stu->name, name, 19);
     stu->enrolledYear = 2017;
 }
 ```
+
 - An alternative approach sometimes preferred in C is to <span style="color: red">accept the struct as a parameter</span>. This allows the calling program to perform the memory allocation itself before calling the function.
 - 在 C 语言中，有时会采用一种替代方法，即接受结构体作为参数。这允许调用程序在调用函数之前自行进行内存分配。
 - This is a bit awkward but has some advantages. The caller can decide if the enrolled student should be dynamically managed or in a regular variable. It can also “reuse” an already existing `student` that is no longer needed.

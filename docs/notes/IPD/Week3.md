@@ -18,6 +18,7 @@ Grasping its Composition, Prioritization, and the Importance of Continuous Refin
 把握其构成、优先顺序和持续精细化的重要性
 
 ### Develop a Product Vision
+
 Able to formulate a clear, inspiring product vision and understand its guiding role in product direction  
 能够制定一个清晰的，鼓舞人心的产品愿景，并理解其在产品方向上的指导作用
 
@@ -43,6 +44,7 @@ Core Idea:  核心理念：
 
 "What major stages or main activities do users experience when using the product?"
 “用户在使用产品时经历了哪些主要阶段或主要活动？”
+
 - For example: Login, Browse products, Post products, Transactions, Reviews, etc.
 - 例如：登录、浏览产品、发布产品、交易、评论等。
 
@@ -52,6 +54,7 @@ Core Idea:  核心理念：
 
 Under each activity, what specific steps does the user perform?  
 在每个活动下，用户执行哪些具体步骤？  
+
 - For example, under "Browse products": "Search products." "View product details," "Add to cart." etc.
 - 例如，在“浏览产品”下：“搜索产品”。“查看产品详细信息”、“添加到购物车”等。
 
@@ -97,10 +100,12 @@ For each user step, write specific, independent, and valuable user stories
 ### Product Backlog
 
 #### Definition
+
 "The product backlog is an ordered list of all known requirements for a product, and it is the sole source of product development."  
 产品待办事项列表是一个产品所有已知需求的有序列表，它是产品开发的唯一来源。
 
 #### Composition
+
 User stories, defects, technical debt, new features, optimization items, etc.  
 用户故事、缺陷、技术债务、新特性、优化项等等。
 
@@ -128,10 +133,10 @@ User stories, defects, technical debt, new features, optimization items, etc.
 - **Factors to Consider**: Value/benefit, cost/effort, risk, dependencies
 - 需要考虑的因素：价值/收益，成本/努力，风险，依赖性
 - **Methods**:
-    - MoSCoW (Must have, Should have, Could have, Won't have)
-    - MoSCow（一定有，应该有，可能有，不会有）
-    - Weighted Shortest Job First (WSJF)
-    - 加权最短作业优先 (WSJF)
+  - MoSCoW (Must have, Should have, Could have, Won't have)
+  - MoSCow（一定有，应该有，可能有，不会有）
+  - Weighted Shortest Job First (WSJF)
+  - 加权最短作业优先 (WSJF)
 
 ### Backlog Refinement
 
@@ -144,6 +149,7 @@ Jira, Trello, Asana
 ![](../../img/ipd-img4.png)
 
 ## Part 4: Product Vision
+
 A product vision is a long-term, ambitious, and inspiring description of the product's future state.  
 产品愿景是对产品未来状态的长期的、雄心勃勃的、鼓舞人心的描述。  
 It answers two core questions: <span style="color: red">"Why are we building this product?"</span> and <span style="color: red">"What do we want this product to ultimately become?"</span>  
@@ -152,7 +158,9 @@ It answers two core questions: <span style="color: red">"Why are we building thi
 角色：为团队提供方向和凝聚力，指导所有决策。  
 
 ### Product Vision Statement Template
+
 Geoffrey Moore's Template:
+
 ```
 For [target customer]
 针对[目标客户]
@@ -167,23 +175,30 @@ Unlike [main competitor]
 Our product [core differentiated advantage]
 我们的产品[核心差异化优势]
 ```
+
 "For urban residents seeking convenient transportation, Who are tired of traffic jams and parking difficulties, The Uber is an on-demand ride-hailing service, That connects passengers and drivers via a mobile app, providing a convenient and efficient travel experience. Unlike traditional taxis, Our product offers more flexible dispatching, more transparent pricing, and more personalized service."  
 “对于那些厌倦了交通拥堵和停车困难的城市居民来说，优步是一种按需叫车服务，通过移动应用程序连接乘客和司机，提供方便高效的出行体验。与传统出租车不同，我们的产品提供更灵活的调度、更透明的定价和更个性化的服务。”
 
 ## Part 5: Relating to PMBOK Knowledge Areas
+
 ### Planning Performance Domain
+
 - "Requirement refinement" and "product backlog construction" are core planning processes
 - “需求细化”和“产品待办事项列表构建”是核心计划过程
 - PMBOK emphasizes planning through iterative and incremental approaches, which aligns with the continuous refinement of the product backlog in agile
 - PMBOK强调通过迭代和增量方法进行计划，这与敏捷中产品待办事项列表的持续细化相一致
 - User story maps are also a visual planning tool
 - 用户故事地图也是一种视觉规划工具
+
 ### Delivery Performance Domain - Scope Definition
+
 - User story maps and product backlogs jointly define the "scope" of the product
 - 用户故事图和产品backlog共同定义了产品的“范围”
 - The Delivery Performance Domain focuses on how to effectively deliver value, and clearly defined requirements (through story maps and backlog) are a prerequisite for effective delivery
 - 交付性能领域关注于如何有效地交付价值，而明确定义的需求（通过故事图和待办事项）是有效交付的先决条件
+
 ### Strategic Artifacts
+
 - **Product Vision Statement**: A key strategic artifact that guides product direction and ensures alignment with organizational strategy
 - 产品愿景声明：指导产品方向并确保与组织战略保持一致的关键战略工件
 - **Roadmap**: The slices (Releases) of the user story map can be seen as the preliminary form of a product roadmap, showing the product's delivery plan at different stages

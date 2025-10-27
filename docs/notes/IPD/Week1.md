@@ -1,9 +1,11 @@
 # Week 1
 
 ## Coursework Part A – Project Proposal & Defense
+
 **Module:** CHC5056 Innovative Product Development  
 
 ## Learning Objectives
+
 - **Understanding Requirements**  
   Comprehend the core requirements and structure of Coursework Part A  
 
@@ -17,6 +19,7 @@
   Enhance oral communication abilities for the Presentation & Defense component  
 
 ## Coursework Part A Overview
+
 - **Weighting:** 30% of final grade  
 - **Word Count:** Maximum 1,500 words  
 - **Format:** Word document, 11pt Arial font, Harvard/IEEE citation format  
@@ -24,6 +27,7 @@
 - **Additional Requirement:** Individual Presentation/Defense  
 
 ## Coursework Structure (5 Sections)
+
 1. **Title & Description**  
    Product purpose, functionality, users and beneficiaries  
 
@@ -40,6 +44,7 @@
    Technical and soft skills required, tailored to project specifics  
 
 ## Pitfalls to Avoid
+
 - **Descriptive Without Analysis** – Merely describing without applying critical thinking or evaluation  
 - **Missing Justification** – Failing to explain why certain approaches or decisions were made  
 - **Vague Technical Solutions** – Proposing technical approaches that are too ambiguous or unrealistic  
@@ -47,6 +52,7 @@
 - **Undeclared AI Assistance** – Using AI-generated content without proper acknowledgement  
 
 ## First Session (45 minutes)
+
 **Objective:** Understanding Coursework Requirements  
 
 1. **Opening Discussion (5 min)** – What do you find most challenging about writing proposals?  
@@ -55,6 +61,7 @@
 4. **Group Reporting & Summary (10 min)** – Share insights and consolidate understanding  
 
 ## Second Session (45 minutes)
+
 **Objective:** Practical Application  
 
 1. **Warm-up Review (5 min)** – Quick recap of key concepts from first session  
@@ -66,6 +73,7 @@
 Come to class with a product idea in mind to make the exercises more relevant to your actual coursework.  
 
 ## Practice Tasks & Examples
+
 - **Section 1 Exercise:** Develop a product idea and identify users & stakeholders  
   - *Key focus:* Clear articulation of purpose and beneficiaries  
 
@@ -75,15 +83,17 @@ Come to class with a product idea in mind to make the exercises more relevant to
 - **Presentation Simulation:** Present your core value proposition & technology choices in 2 minutes  
   - *Key focus:* Concision, clarity, and justification  
 
-
 ## Presentation & Defense Key Points
+
 - **Clarity:** Be concise, structure presentation logically (beginning, middle, end)  
 - **Justification:** Explain *why* not just *what*; provide reasoning for decisions  
 - **Engagement:** Interact with audience, respond thoughtfully, maintain eye contact  
 - **Commercial Acumen:** Show market understanding and feasibility; address business challenges & opportunities  
 
 ## Homework
+
 ### Complete Proposal Outline
+
 - **Draft Outline:** Write at least one sentence for each of the five sections  
 - **Prepare for Presentation:** Start planning how you’ll present your project in the next session  
 

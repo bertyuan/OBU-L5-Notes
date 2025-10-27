@@ -5,6 +5,7 @@
 Complete each of the exercises below using CLion. Test each exercise after implementing it; the exercise is not complete until the program works.
 
 1. Create a C project. Copy and paste the program below which uses a pointer to allow a function to update the value of a parameter variable (this is called a _transput parameter_):
+
 ```c
 #include <stdio.h>
 #include <stdint.h>
@@ -18,10 +19,12 @@ int main() {
     printf("%i.\n",b);
 }
 ```
+
 Run the program.  
 
 2. Modify _addOneTo_ so that instead of adding one, it inputs a second number and adds that to the given variable. _(Should the second number be passed as a value or an <span style="color: red">address</span>?)_  
 参考答案：
+
 ```c
 //  
 // Created by 不死鸟Anka on 2025/9/29.  
@@ -43,8 +46,10 @@ int main() {
     printf("%i.\n",b);  
 }
 ```
+
 3. Write a function _swapInts_ which exchanges the contents of two 16-bit unsigned integer variables.  
 参考答案：
+
 ```c
 //  
 // Created by 不死鸟Anka on 2025/9/29.  
@@ -68,10 +73,12 @@ int main() {
     return 0;  
 }
 ```
+
 4. Write a C program that asks the user to enter their name, then says "Hello" to them by name.
 5. Modify the program so that if the first character of the user's name is an H (or a lowercase h), it is replaced by a ' (apostrophe) in the printout. So entering the name `Harry` should produce `Hello 'arry`.
 6. Modify the program so that after greeting the user, it will tell them how many vowels (the letters a, e, i, o, and u) are in their name. _(You'll need to loop through the string. If you remember how C marks the end of a string, you won't need to use the strlen function.)_  
 参考答案：
+
 ```c
 //  
 // Created by 不死鸟Anka on 2025/9/29.  
@@ -108,7 +115,9 @@ int main() {
     return 0;  
 }
 ```
+
 7. Copy and paste the following program:
+
 ```c
 #include <stdio.h>
 #include <stdint.h>
@@ -122,6 +131,7 @@ int main() {
     printf("But also, B is %i and the first character of aString is %c.\n",addressOfB[0], *（aString+3));
 }
 ```
+
 It might seem that this program should not work, but it does. Why does the second `printf` line work? _(Look up in the slides what the `[]` operator does, and what the `*` operator does.)_
 
 _The `int *` is a integrated statement ,it means a pointer type variable._  
@@ -129,8 +139,10 @@ _The `int *` is a integrated statement ,it means a pointer type variable._
 _`*aString` means the first character in the string because cant handle the string as a whole part_  
 
 ---
+
 8. Create a C++ project. Copy and paste the code from exercise 1 above. Run it to confirm that it is still valid in C++. Then modify it to use the C++ "reference" syntax instead of the C "pointer" syntax.  
 参考答案：
+
 ```cpp
 //  
 // Created by 不死鸟Anka on 2025/9/29.  
@@ -147,8 +159,10 @@ int main() {
     printf("%i.\n",b);  
 }
 ```
+
 9. Do exercises 2 and 3 using the C++ reference syntax.  
 参考答案：
+
 ```cpp
 //  
 // Created by 不死鸟Anka on 2025/9/29.  
@@ -169,8 +183,10 @@ int main() {
     return 0;  
 }
 ```
+
 10. Do exercises 5 and 6 using the C++ _string_ object instead of character arrays.  
 参考答案：
+
 ```cpp
 //  
 // Created by 不死鸟Anka on 2025/9/29.  

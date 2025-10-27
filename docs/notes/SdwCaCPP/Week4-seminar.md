@@ -1,7 +1,8 @@
 # Week 4 Seminar Exercises
 
 Complete each of the exercises below using CLion. Test each exercise after implementing it; the exercise is not complete until the program works.
-1.	Create a C++ project. Cut and paste the following code that defines and uses a class.
+
+1. Create a C++ project. Cut and paste the following code that defines and uses a class.  
 
 ```cpp
 #include <iostream>
@@ -50,6 +51,7 @@ int main() {
 
 }
 ```
+
 Test and run this program. Why does the message "Destroyed a Value Veridian FidgetSpinner" appear at the end of the program? (It is supposed to.)
 
 > [!NOTE]
@@ -58,23 +60,27 @@ Test and run this program. Why does the message "Destroyed a Value Veridian Fidg
 > 但如果写：`FidgetSpinner x;    // 明确：对象定义，调用无参构造`  
 > 编译器就能确定这是在定义对象。  
 > 但是由于我们覆盖了默认的无参构造函数，这样写也不行。  
-
+>
 > [!TIP]
 > `const`是constant的简写，是C++中极为常见且重要的关键字，主要功能是设置某些参数不可修改。  
 > `static`是静态变量，存储在**静态存储区**（存储在静态存储区的变量，如果不显式地对其进行初始化，系统会将其初始化为0），在程序执行期间，**对应的存储空间不会释放**，一直到程序结束才会释放。在声明后的任意位置均可调用和更改值。  
 > 另，和Java一样，C++也支持override和overload
 
-2.	Modify the program to add a constructor to `FidgetSpinner` that allows both the color and the size to be specified. Modify both of the statements that construct `FidgetSpinners` to specify different sizes for them.
-3.	Add some simple physics to the fidget spinners:
+2. Modify the program to add a constructor to `FidgetSpinner` that allows both the color and the size to be specified. Modify both of the statements that construct `FidgetSpinners` to specify different sizes for them.
+
+3. Add some simple physics to the fidget spinners:
     - Add two new protected data members, `velocity` and `angle`, to the class. Both should be initialized to 0.
     - Modify the `spin` method to take a parameter `strength`. Instead of modifying `spins`, it should add `strength` to `velocity`.
     - Add a `tick` method (to represent time passing). It should do two things:
         - Add `velocity` to `angle`. Then, if `angle` is greater than 10, subtract 10 from it until it is less than 10, and add 1 to `spins` for each 10 subtracted. If `spins` was changed, print out the number of times the spinner has now spun.
-        - Lower `velocity` by an amount equal to `size`. If this reduces it to zero or below, `velocity` should be set to zero, and it should print a message that the spinner has stopped, and what angle it stopped at. 
+        - Lower `velocity` by an amount equal to `size`. If this reduces it to zero or below, `velocity` should be set to zero, and it should print a message that the spinner has stopped, and what angle it stopped at.
     Modify the program to make the "reference red" spinner size 3, and spin it at strength 10; then call `tick` on it 5 times. It should spin twice and then stop at angle 2. (10 + (10-3) + (10-3-3) + (10-3-3-3) = 22.)
-4.	Modify the main program spin both spinners and then loop calling `tick` on them both, until they both stop. You will need to add new methods to the class to achieve this.
-5.	Modify the program to create 5 spinners in an array, spin them all, and then call `tick` on them until all of them are stopped. (You will need to store them in the array by reference, unless you want to initialize them all in one statement!)
-6.	C++ supports `static` methods and properties in the same way that Java does, except that their initialization must occur **outside** the class definition (they must still be declared inside it). A static item `a` in class `b` is addressed as `b::a`. Modify the `FidgetSpinner` class so that the array of 5 spinners is stored inside the class and spinners are automatically added to or removed from it when they are created. If more than 5 spinners are created at once, the extras should not be stored in the array.
+
+4. Modify the main program spin both spinners and then loop calling `tick` on them both, until they both stop. You will need to add new methods to the class to achieve this.
+
+5. Modify the program to create 5 spinners in an array, spin them all, and then call `tick` on them until all of them are stopped. (You will need to store them in the array by reference, unless you want to initialize them all in one statement!)
+
+6. C++ supports `static` methods and properties in the same way that Java does, except that their initialization must occur **outside** the class definition (they must still be declared inside it). A static item `a` in class `b` is addressed as `b::a`. Modify the `FidgetSpinner` class so that the array of 5 spinners is stored inside the class and spinners are automatically added to or removed from it when they are created. If more than 5 spinners are created at once, the extras should not be stored in the array.
 
 > [!NOTE]
 > 关于写不写explicit的问题：  
@@ -85,6 +91,7 @@ Test and run this program. Why does the message "Destroyed a Value Veridian Fidg
 > [c++ 写不写explicit有无区别 - Google 搜索](https://www.google.com/search?q=c%2B%2B+%E5%86%99%E4%B8%8D%E5%86%99explicit%E6%9C%89%E6%97%A0%E5%8C%BA%E5%88%AB&newwindow=1)
 
 参考答案:
+
 ```cpp
 #include <iostream>  
 #include <cstdlib>  

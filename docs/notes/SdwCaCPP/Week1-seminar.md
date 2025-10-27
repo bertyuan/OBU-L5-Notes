@@ -20,7 +20,7 @@ int main() {
 
 ## 当周习题参考
 
-1.	Compile and run the basic "Hello, World!" program in C that is provided by CLion when you create a "C Executable".
+1. Compile and run the basic "Hello, World!" program in C that is provided by CLion when you create a "C Executable".
 
 ::: code-group
 
@@ -44,9 +44,10 @@ int main()
     return 0;
 }
 ```
+
 :::
 
-2.	Referring to the slides for example code, write a C program that counts from 1 to 20, printing out each number as it goes followed by "and then.." on a separate line, then finally printing "that's all." The output should look like:
+2. Referring to the slides for example code, write a C program that counts from 1 to 20, printing out each number as it goes followed by "and then.." on a separate line, then finally printing "that's all." The output should look like:
 
 ```txt
 1 and then..
@@ -109,6 +110,7 @@ int main()
     return 0;
 }
 ```
+
 :::
 
 4. Modify the C program so that if the user enters a number less than 1 or more than 100, the program displays an error message and asks them to enter a new number. (`While` and `Do..while` statements in C have the same syntax as Java.)
@@ -151,7 +153,7 @@ int main()
 
 ```
 
-6.	Modify the program to ask the user what their name is, and then say "Hello" to them by name. (In C++ the type of a string is `string`. In C strings are more complicated, so don't try and do this in C for now.)
+6. Modify the program to ask the user what their name is, and then say "Hello" to them by name. (In C++ the type of a string is `string`. In C strings are more complicated, so don't try and do this in C for now.)
 
 ```cpp
 #include <iostream>
@@ -168,7 +170,7 @@ int main()
 }
 ```
 
-7.	Write a function that inputs a 16-bit integer and returns true if it is even. (Remember that your main function shows the pattern of a function definition. The type for booleans in C and C++ is `bool`. Modulus and equality are `%` and `==` as in Java.) Add this function to your C++ program and test it by calling it on 3 and 4.
+7. Write a function that inputs a 16-bit integer and returns true if it is even. (Remember that your main function shows the pattern of a function definition. The type for booleans in C and C++ is `bool`. Modulus and equality are `%` and `==` as in Java.) Add this function to your C++ program and test it by calling it on 3 and 4.
 
 ```cpp
 #include <iostream>
@@ -195,7 +197,7 @@ int main()
 }
 ```
 
-8.	Modify the program to ask the user for a number and then tell them if it is odd or even.
+8. Modify the program to ask the user for a number and then tell them if it is odd or even.
 
 ```cpp
 #include <iostream>
