@@ -36,7 +36,7 @@ Every week:
   <thead>
     <tr>
       <th colspan="2">On successful completion of this module, students will be able to:</th>
-      <th>Brookes Attribute developed<span style="color: red">*</span></th>
+      <th>Brookes Attribute developed*****</th>
       <th>Other GAs developed, if applicable</th>
     </tr>
   </thead>

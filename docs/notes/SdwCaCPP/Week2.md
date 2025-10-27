@@ -152,10 +152,10 @@ void addOneTo(uint16_t *x) {
 
 This shows how you can write a function that updates its parameter, like `scanf`.
 
-- `uint16_t *x` declares that <span style="color: red">x</span> holds <span style="color: red">the address of</span> a 16-bit unsigned integer (this is called a <span style="color: red">pointer</span>)
-- `*x` tells C to go to the address stored in <span style="color: red">x</span> and read or update the value there.
+- `uint16_t *x` declares that **x** holds **the address of** a 16-bit unsigned integer (this is called a **pointer**)
+- `*x` tells C to go to the address stored in **x** and read or update the value there.
 
-<p style="text-align:center;">This is called <span style="color: red">dereferencing（解除引用）</span></p>
+<p style="text-align:center;">This is called **dereferencing（解除引用）**</p>
 
 ```c
 int main() {
@@ -165,8 +165,8 @@ int main() {
 }
 ```
 
-- When we call addOneTo(), we have to pass it a pointer, not a number. So we use the <span style="color: red">&amp;</span> operator.
-- Note that we are passing a basic type, an int, by reference here. One of the benefits of <span style="color: red">references being explicit（显式引用）</span> in C is that we can pass any type we choose by reference or by value.
+- When we call addOneTo(), we have to pass it a pointer, not a number. So we use the **&amp;** operator.
+- Note that we are passing a basic type, an int, by reference here. One of the benefits of **references being explicit（显式引用）** in C is that we can pass any type we choose by reference or by value.
 
 #### Accepting references in C
 
@@ -222,9 +222,9 @@ C language can’t accept the function arguments like `void addOneTo3(int &x);`
 
 #### Accepting references in C++
 
-- In C++, declaring a parameter with an <span style="color: red">&amp;</span> instead of a <span style="color: red">*</span> creates a special reference parameter (called a <span style="color: #8B0000">reference</span> rather than a <span style="color: #8B0000">pointer</span>)
+- In C++, declaring a parameter with an **&amp;** instead of a ***** creates a special reference parameter (called a <span style="color: #8B0000">reference</span> rather than a <span style="color: #8B0000">pointer</span>)
 - It behaves like the pointer did in C, except that the compiler deals with getting addresses and dereferencing for you.
-- You do not have to remember to write `&b` when calling the function, nor to write `*x` when modifying the value, <span style="color: red">because</span> the compiler knows that the type is a reference and inserts these for you.
+- You do not have to remember to write `&b` when calling the function, nor to write `*x` when modifying the value, **because** the compiler knows that the type is a reference and inserts these for you.
 
 ---
 
@@ -265,12 +265,12 @@ int main() {
 0x8000127e0
 ```
 
-<span style="color: red">Where is the “123” in memory?</span>
+**Where is the “123” in memory?**
 
 ---
 
 - Danger awaits those who incautiously use pointers.
-- When you create a pointer in C++, <span style="color: red">the computer allocates memory to hold an address, but it does not allocate memory to hold the data to which the address points.</span>
+- When you create a pointer in C++, **the computer allocates memory to hold an address, but it does not allocate memory to hold the data to which the address points.**
 - Creating space for the data involves a separate step. Omitting that step, as in the above, is an invitation to disaster.
 
 ```cpp
@@ -282,7 +282,7 @@ int main() {
 }
 ```
 
-<span style="color: red">Thinking Question: Ok or not? Why?</span>
+**Thinking Question: Ok or not? Why?**
 
 ```console
 123
@@ -293,14 +293,14 @@ int main() {
 
 ---
 
-- The `<<` operator in C++ (as in `cin >> name`) works like this. It is declared to accept a reference, so you do not have to write `&name;` C++ <span style="color: red">automatically</span> passes in the address because it knows `<<` accepts a reference.
+- The `<<` operator in C++ (as in `cin >> name`) works like this. It is declared to accept a reference, so you do not have to write `&name;` C++ **automatically** passes in the address because it knows `<<` accepts a reference.
 - Using this syntax can help prevent mistakes.
 - However, it also hides what is going on.
 
 ##### Summary
 
 Now, the difference between \* and &:  
-<span style="color: red">&amp; is the reference operator, and * is the dereference.</span>
+**&amp; is the reference operator, and * is the dereference.**
 
 | &                                        | \*                                               |
 | ---------------------------------------- | ------------------------------------------------ |
@@ -313,7 +313,7 @@ The C compiler will:
 
 - Look at the size of the array (20) and the size of the type you asked for. Then multiply these together to get a total size for the array.
 - Reserve that much memory in the static data area of the program and store the address of this memory.
-- Treat anything mentioning the variable <span style="color: #8B0000">scores</span> as meaning that <span style="color: red">address</span>.
+- Treat anything mentioning the variable <span style="color: #8B0000">scores</span> as meaning that **address**.
 
 ## Arrays: watch out
 
@@ -324,7 +324,7 @@ The C compiler will:
 - `scores[19]` will give a uint16
 <span style="color: #8B0000">scores</span> on its own will give an <span style="color: #8B0000">address</span>
 `scores2 = scores;`
-- will not copy the entire array. It will <span style="color: red">set the address of scores2 equal to the address of scores</span>. This means that both will refer to the same area of memory and changes made to one will apply to the other.
+- will not copy the entire array. It will **set the address of scores2 equal to the address of scores**. This means that both will refer to the same area of memory and changes made to one will apply to the other.
 
 ## Using an array in C
 
@@ -344,9 +344,9 @@ int main() {
 
 ## Strings in C
 
-- In C, a string is just <span style="color: red">an array of characters</span>.
+- In C, a string is just **an array of characters**.
     `char name[20];`
-- Note that since it is an array, you <span style="color: red">must</span> specify a maximum length.
+- Note that since it is an array, you **must** specify a maximum length.
 - The actual length of the string is <span style="color: #8B0000">not stored directly!</span>
 
 ---
@@ -398,7 +398,7 @@ name[3] = ‘\0’; // Null character.
 In fact, this is exactly what the `strcpy` function does, but with a loop.  
 Format: `char *strcpy(char *dest, char *src);`  
 Example: `strcpy(name,”Bob”);`  
-<span style="color: red">In C/C++: Double quotes (“”) for strings and single for char type.</span>
+**In C/C++: Double quotes (“”) for strings and single for char type.**
 
 ## Strings in C: Compare
 
@@ -413,8 +413,8 @@ if (name == “Bob”) {
 ```
 
 Why does this always print “I don’t know you”, even if you type “Bob”?
-> ➢ <span style="color: red">Name</span> stores an address.  
-> ➢ comparing the address stored in <span style="color: red">name</span> with the address where the compiler stored the constant string `Bob`.
+> ➢ **Name** stores an address.  
+> ➢ comparing the address stored in **name** with the address where the compiler stored the constant string `Bob`.
 
 - Again, to compare strings the function `strcmp` is provided. This encapsulates the loop necessary to compare the strings.
 - Also, it returns 0 if the strings match which must be allowed for in the if statement.
@@ -438,8 +438,8 @@ char phrase[20];
 strcpy(phrase,”Hello There”);
 ```
 
-- Suppose we now wanted to modify <span style="color: red">phrase</span> so that it contains “Hello Chris”.
-- We could <span style="color: red">strcpy</span> the whole phrase into the array, overwriting the previous one.
+- Suppose we now wanted to modify **phrase** so that it contains “Hello Chris”.
+- We could **strcpy** the whole phrase into the array, overwriting the previous one.
 - But we can also do:
     `strcpy(phrase+6,”Chris”);`
 - A preferable syntax for this is
@@ -450,10 +450,10 @@ strcpy(phrase,”Hello There”);
 
 ## C++ strings
 
-- C++ has a type <span style="color: red">string</span> which is a <span style="color: red">class</span>, like Java strings.
+- C++ has a type **string** which is a **class**, like Java strings.
 - All of the complex loops are hidden inside the methods of the class.
-- C++ allows methods to <span style="color: red">override</span> the basic operators applied to a class type.
-- So using = on a C++ string actually calls a method that acts like <span style="color: red">strcpy</span>. Using == to test equality calls a method that acts like <span style="color: red">strcmp</span>.
+- C++ allows methods to **override** the basic operators applied to a class type.
+- So using = on a C++ string actually calls a method that acts like **strcpy**. Using == to test equality calls a method that acts like **strcmp**.
 
 ### C++ string methods
 
@@ -472,9 +472,9 @@ strcpy(phrase,”Hello There”);
 ## Inputting C++ strings
 
 - You can input a string in C++ using `cin << s` as usual.
-- <span style="color: red">Caution</span>, the input will stop at a whitespace character (such as a space).
+- **Caution**, the input will stop at a whitespace character (such as a space).
 - To input a line ending in a return, use the function `getline(cin, s);`
-- Just like `<<`, `getline` uses reference parameters so you are effectively <span style="color: red">passing the address of</span> `s`, even without writing it explicitly.
+- Just like `<<`, `getline` uses reference parameters so you are effectively **passing the address of** `s`, even without writing it explicitly.
 
 ## C++ string and C strings
 
@@ -486,9 +486,9 @@ strcpy(phrase,”Hello There”);
 
 ## C and C++
 
-- Given that C++ is much more convenient, you might be wondering <span style="color: red">why does anyone use C</span>?
+- Given that C++ is much more convenient, you might be wondering **why does anyone use C**?
 - In exchange for programmer convenience C++ (and many modern languages) hides complexity from the programmer. It is easy to write code which takes a lot of CPU time or memory without realizing it, because it is hidden.
-- When writing programs that need to be <span style="color: red">small</span> and <span style="color: red">efficient, you’d better encoding by C.</span>
+- When writing programs that need to be **small** and **efficient, you’d better encoding by C.**
 - C makes sure you are fully aware of what is going on.
 
 ## Summary

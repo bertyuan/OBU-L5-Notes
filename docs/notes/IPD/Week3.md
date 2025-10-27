@@ -152,7 +152,7 @@ Jira, Trello, Asana
 
 A product vision is a long-term, ambitious, and inspiring description of the product's future state.  
 产品愿景是对产品未来状态的长期的、雄心勃勃的、鼓舞人心的描述。  
-It answers two core questions: <span style="color: red">"Why are we building this product?"</span> and <span style="color: red">"What do we want this product to ultimately become?"</span>  
+It answers two core questions: **"Why are we building this product?"** and **"What do we want this product to ultimately become?"**  
 它回答了两个核心问题：“我们为什么要开发这个产品？”以及“我们希望这个产品最终成为什么？”  
 **Role**: Provides direction and cohesion for the team, guiding all decisions.  
 角色：为团队提供方向和凝聚力，指导所有决策。  
