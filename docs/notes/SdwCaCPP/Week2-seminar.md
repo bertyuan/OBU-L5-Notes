@@ -22,7 +22,7 @@ int main() {
 
 Run the program.  
 
-2. Modify _addOneTo_ so that instead of adding one, it inputs a second number and adds that to the given variable. _(Should the second number be passed as a value or an **address**?)_  
+2. Modify _addOneTo_ so that instead of adding one, it inputs a second number and adds that to the given variable. _(Should the second number be passed as a value or an <span style="color: red">address</span>?)_  
 参考答案：
 
 ```c
