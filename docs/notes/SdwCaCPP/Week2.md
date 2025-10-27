@@ -222,7 +222,7 @@ C language can’t accept the function arguments like `void addOneTo3(int &x);`
 
 #### Accepting references in C++
 
-- In C++, declaring a parameter with an **&amp;** instead of a ***** creates a special reference parameter (called a <span style="color: #8B0000">reference</span> rather than a <span style="color: #8B0000">pointer</span>)
+- In C++, declaring a parameter with an **&amp;** instead of a ***** creates a special reference parameter (called a **reference** rather than a **pointer**)
 - It behaves like the pointer did in C, except that the compiler deals with getting addresses and dereferencing for you.
 - You do not have to remember to write `&b` when calling the function, nor to write `*x` when modifying the value, **because** the compiler knows that the type is a reference and inserts these for you.
 
@@ -313,7 +313,7 @@ The C compiler will:
 
 - Look at the size of the array (20) and the size of the type you asked for. Then multiply these together to get a total size for the array.
 - Reserve that much memory in the static data area of the program and store the address of this memory.
-- Treat anything mentioning the variable <span style="color: #8B0000">scores</span> as meaning that **address**.
+- Treat anything mentioning the variable **scores** as meaning that **address**.
 
 ## Arrays: watch out
 
@@ -322,7 +322,7 @@ The C compiler will:
 - `scores[0]` will give a uint16
 - ...
 - `scores[19]` will give a uint16
-<span style="color: #8B0000">scores</span> on its own will give an <span style="color: #8B0000">address</span>
+**scores** on its own will give an **address**
 `scores2 = scores;`
 - will not copy the entire array. It will **set the address of scores2 equal to the address of scores**. This means that both will refer to the same area of memory and changes made to one will apply to the other.
 
@@ -347,7 +347,7 @@ int main() {
 - In C, a string is just **an array of characters**.
     `char name[20];`
 - Note that since it is an array, you **must** specify a maximum length.
-- The actual length of the string is <span style="color: #8B0000">not stored directly!</span>
+- The actual length of the string is **not stored directly!**
 
 ---
 

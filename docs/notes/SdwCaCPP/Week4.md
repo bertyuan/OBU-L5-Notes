@@ -32,10 +32,10 @@
 | **Java**                                                                                                  | **C++**                                                                                                                                    |
 |-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | Everything must be an object<br>一切都必须是对象                                                          | You can choose when to use objects<br>你可以选择何时使用对象                                                                               |
-| Classes (as well as properties/methods) can have access specifiers<br>类（以及属性/方法）可以具有访问限定符 | <span style="color:red">Classes can’t have access specifiers because C++ doesn’t have packages<br>类不能有访问限定符，因为 C++没有包</span> |
+| Classes (as well as properties/methods) can have access specifiers<br>类（以及属性/方法）可以具有访问限定符 | **Classes can’t have access specifiers because C++ doesn’t have packages<br>类不能有访问限定符，因为 C++没有包** |
 | Classes go in their own files<br>类可以放在它们自己的文件中                                               | Classes can go in any file<br>类可以放在任何文件中                                                                                         |
 > [!TIP]
-> For C++, we <span style="color:red">can’t</span> define a class as following way:  
+> For C++, we **can’t** define a class as following way:  
 > `public class xxx{}`
 
 ---
@@ -92,15 +92,15 @@ fido->makeNoise();
 
 ## What is an object?
 
-- In machine code, an object (class instance) is the same as a <span style="color:red">struct</span>. Each instance contains only the data members of the class.<br>在机器码中，对象（类实例）与结构体相同。每个实例只包含类的数据成员。
-- <span style="color:red">Methods</span> are not duplicated within each instance (there would be no point!) Instead, they are compiled the same as regular global functions, but their names are internally changed (<span style="color:red">mangled</span>) to prevent them from being confused with functions in other classes.<br>方法在每个实例中不会重复（那没有意义！）相反，它们与常规的全局函数一样编译，但它们的名称在内部被更改（混淆）以防止与其它类中的函数混淆。
+- In machine code, an object (class instance) is the same as a **struct**. Each instance contains only the data members of the class.<br>在机器码中，对象（类实例）与结构体相同。每个实例只包含类的数据成员。
+- **Methods** are not duplicated within each instance (there would be no point!) Instead, they are compiled the same as regular global functions, but their names are internally changed (**mangled**) to prevent them from being confused with functions in other classes.<br>方法在每个实例中不会重复（那没有意义！）相反，它们与常规的全局函数一样编译，但它们的名称在内部被更改（混淆）以防止与其它类中的函数混淆。
 
 ---
 
 - When you call a method on an instance, such as `rover.makeNoise()`, the compiler<br>当你对一个实例调用方法时，例如 `rover.makeNoise()` ，编译器
     - Looks up the declared class of `Rover` and sees that it is `Animal`<br>查找 `Rover` 声明的类，并看到它是 `Animal`
     - Looks up the mangled name of the “`makeNoise`” function for `Animal`<br>查找 “`makeNoise`” 函数的混淆名称，用于 `Animal`
-    - Performs a call to that mangled function, adding an invisible parameter <span style="color:red">“this”</span> which holds a pointer to the instance on which the call was made (in this case `rover`)<br>执行对该混乱函数的调用，添加一个不可见的参数“this”，该参数包含指向调用实例的指针（在这种情况下为 `rover` ）
+    - Performs a call to that mangled function, adding an invisible parameter **“this”** which holds a pointer to the instance on which the call was made (in this case `rover`)<br>执行对该混乱函数的调用，添加一个不可见的参数“this”，该参数包含指向调用实例的指针（在这种情况下为 `rover` ）
 
 ## The machine code truth
 
@@ -128,9 +128,9 @@ _ZN6Animal9MakeNoiseEv(&rover);
 - Access specifiers in C++ are the same as in Java: `public`, `protected` and `private`.<br>C++中的访问限定符与 Java 相同： `public` 、 `protected` 和 `private` 。
 - These have no effect in machine code. They are only checked at compile time.<br>它们在机器代码中没有任何效果。它们只在编译时进行检查。
 <center>Specifiers are meaningful to programmer<br>限定符对程序员有意义<br>
-Specifiers help programmer define <span style="color:red">the logical relationship</span> within programs<br>限定符帮助程序员定义程序内的逻辑关系</center>
+Specifiers help programmer define **the logical relationship** within programs<br>限定符帮助程序员定义程序内的逻辑关系</center>
 
-- Technically it is possible to violate access specifiers by accessing memory directly, since an object instance is just a <span style="color:red">struct</span>. But in practice, this is a very (very) bad idea.<br>技术上，通过直接访问内存来违反访问限定符是可能的，因为对象实例只是一个结构体。但在实践中，这（非常非常）不是一个好主意。
+- Technically it is possible to violate access specifiers by accessing memory directly, since an object instance is just a **struct**. But in practice, this is a very (very) bad idea.<br>技术上，通过直接访问内存来违反访问限定符是可能的，因为对象实例只是一个结构体。但在实践中，这（非常非常）不是一个好主意。
 
 ## Declaring a constructor (with parameters)
 
@@ -154,12 +154,12 @@ Animal::Animal(uint16_t _age, const char *namestr) : age(_age),name(namestr) {
     std::cout << name << “has arrived!”;
 }
 ```
-- Note the field initializer syntax used to set the initial values of <span style="color:red">age</span> and <span style="color:red">namestr</span>. This appears somewhere <span style="color:red">outside</span> the code block for the constructor!<br>注意使用字段初始化语法来设置年龄和 namestr 的初始值。这个语法出现在构造函数代码块之外！
+- Note the field initializer syntax used to set the initial values of **age** and **namestr**. This appears somewhere **outside** the code block for the constructor!<br>注意使用字段初始化语法来设置年龄和 namestr 的初始值。这个语法出现在构造函数代码块之外！
 
 ---
 
 - When a new object is created, before any code that refers to it (including its constructor code) can run, all its data members must be allocated in memory. This includes running their constructors (if they are objects) or initializing them to default values.<br>当创建一个新对象时，在引用它的任何代码（包括其构造函数代码）运行之前，必须为其所有数据成员分配内存。这包括运行它们的构造函数（如果它们是对象）或将它们初始化为默认值。
-- Thus, any parameters or default values needed to do this have to be specified outside the constructor code (because <span style="color:red">the code cannot run until the allocation is all done</span>)<br>因此，执行此操作所需的任何参数或默认值都必须在构造函数代码外部指定（因为代码无法在所有分配完成之前运行）
+- Thus, any parameters or default values needed to do this have to be specified outside the constructor code (because **the code cannot run until the allocation is all done**)<br>因此，执行此操作所需的任何参数或默认值都必须在构造函数代码外部指定（因为代码无法在所有分配完成之前运行）
 
 ## Constructors: beware!
 
@@ -171,7 +171,7 @@ Animal::Animal(uint16_t _age, const char *namestr){
 }
 ```
 - Writing a constructor like this (as you would in Java) does work, but in C++ it is very wasteful.<br>编写这样的构造函数（就像在 Java 中那样）是可行的，但在 C++中非常浪费。
-    - <span style="color:red">age</span> and <span style="color:red">name</span> will both be default initialized, then overwritten when the constructor code runs. In other words this is equivalent to:<br>年龄和名称都将进行默认初始化，然后在构造函数代码运行时被覆盖。换句话说，这相当于：
+    - **age** and **name** will both be default initialized, then overwritten when the constructor code runs. In other words this is equivalent to:<br>年龄和名称都将进行默认初始化，然后在构造函数代码运行时被覆盖。换句话说，这相当于：
 ```cpp
 age = 0; 
 age = _age; 
@@ -223,7 +223,7 @@ Animal::Animal(const char *_name) : age(0), name(_name) {
 
 ## Copy construction
 
-- A particularly useful form of implicit constructor is a <span style="color:red">copy constructor</span>. This is a constructor that accepts a pointer to another object of the same class.<br>特别有用的一种隐式构造函数是拷贝构造函数。这是一个接受同一类对象指针的构造函数。
+- A particularly useful form of implicit constructor is a **copy constructor**. This is a constructor that accepts a pointer to another object of the same class.<br>特别有用的一种隐式构造函数是拷贝构造函数。这是一个接受同一类对象指针的构造函数。
 ```cpp
 Animal::Animal(const Animal *c) : age(c->age), name(c->name) { 
     std::cout << name << " has been cloned!";
@@ -238,7 +238,7 @@ Animal *dolly3 = new Animal(&dolly);
 
 ---
 
-Note that the copy constructor must accept a <span style="color:red">pointer</span> to an existing object. If the object was passed by value, then in the course of doing so, <span style="color:red">it would need to be copied already</span>!  
+Note that the copy constructor must accept a **pointer** to an existing object. If the object was passed by value, then in the course of doing so, **it would need to be copied already**!  
 注意，复制构造函数必须接受一个指向现有对象的指针。如果对象是通过值传递的，那么在这个过程中，它已经需要被复制了！
 
 ### Copy Constructor: Example
@@ -273,7 +273,7 @@ p2.x = 10, p2.y = 15
 
 ## Destruction
 
-- As well as constructors, C++ implements <span style="color:red">destructors</span>, which are called when an object is deleted.<br>除了构造函数外，C++还实现了析构函数，当对象被删除时会被调用。
+- As well as constructors, C++ implements **destructors**, which are called when an object is deleted.<br>除了构造函数外，C++还实现了析构函数，当对象被删除时会被调用。
 - An object is deleted when:<br>对象被删除的情况包括：
     - The program ends.<br>程序结束。
     - It is declared by value, and goes out of scope.<br>通过值声明，并且超出作用域。
