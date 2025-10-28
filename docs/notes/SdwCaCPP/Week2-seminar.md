@@ -136,7 +136,7 @@ It might seem that this program should not work, but it does. Why does the secon
 
 _The `int *` is a integrated statement ,it means a pointer type variable._  
 
-_`*aString` means the first character in the string because cant handle the string as a whole part_  
+_`*aString` means the first character in the string because can‘t handle the string as a whole part_  
 
 ---
 

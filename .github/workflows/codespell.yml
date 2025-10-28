@@ -1,4 +1,4 @@
-# Codespell configuration is within .codespellrc
+# Codespell configuration inlined in this workflow (no .codespellrc needed)
 ---
 name: Codespell
 
@@ -19,7 +19,40 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Annotate locations with typos
         uses: codespell-project/codespell-problem-matcher@v1
+
       - name: Codespell
         uses: codespell-project/actions-codespell@v2
+        with:
+          # 扫描范围（默认 .）
+          path: .
+          # 检查文件名与隐藏文件
+          check_filenames: true
+          check_hidden: true
+          # 忽略清单：已包含 package.json / package-lock.json
+          skip: |
+            .git
+            .husky
+            .vscode
+            .idea
+            .venv
+            venv
+            node_modules
+            dist
+            build
+            out
+            coverage
+            *.lock
+            *.min.js
+            *.svg
+            *.pdf
+            *.png
+            *.jpg
+            package.json
+            package-lock.json
+          # 可选：专有名词白名单文件（若你保留的话）
+          ignore_words_file: .codespellignore
+          # 发现错误使 CI 失败（设为 true 则只警告不失败）
+          only_warn: true

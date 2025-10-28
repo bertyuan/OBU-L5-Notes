@@ -114,7 +114,7 @@ rover.makeNoise();
 ⬇️ comprehend codes below as machine codes  
 ⬇️ 将以下代码视为机器代码
 ```console
-void _ZN6Animal9makeNoiseEv(Animal *this) { // “this” is hided by Compiler
+void _ZN6Animal9makeNoiseEv(Animal *this) // “this” is hidden by Compiler
 {
     std::cout << "Hunc.";
     std::cout<<this->name;
