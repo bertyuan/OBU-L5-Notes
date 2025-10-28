@@ -179,7 +179,7 @@ Polymorphism means that there is no type error.
 myPet could be cast back to `Dog*` and the `Colour` member  
 accessed if necessary (although this is bad design practice).
 
-make a summary of the following example
+The following example shows how the `Dog` class inherits from `Animal`, adds a new member (`colour`), and overrides the `makeNoise` method to demonstrate inheritance and polymorphism in C++.
 
 ```cpp
 class Dog: public Animal{
