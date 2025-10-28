@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
 import { groupIconMdPlugin, groupIconVitePlugin, localIconLoader } from 'vitepress-plugin-group-icons'
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -102,6 +103,13 @@ export default defineConfig({
     config(md) {
       md.use(groupIconMdPlugin)
     },
+
+    codeTransformers: [
+      transformerTwoslash() 
+    ],
+    // Explicitly load these languages for types hightlighting
+    languages: ['js', 'jsx', 'ts', 'tsx']
+    
   },
   vite: {
     plugins: [
