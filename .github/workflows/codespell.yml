@@ -4,9 +4,9 @@ name: Codespell
 
 on:
   push:
-    branches: [main]
+    branches: ['**']
   pull_request:
-    branches: [main]
+    branches: ['**']
 
 permissions:
   contents: read
@@ -26,12 +26,12 @@ jobs:
       - name: Codespell
         uses: codespell-project/actions-codespell@v2
         with:
-          # 扫描范围（默认 .）
+          # 扫描范围
           path: .
           # 检查文件名与隐藏文件
           check_filenames: true
           check_hidden: true
-          # 忽略清单：已包含 package.json / package-lock.json
+          # 忽略清单
           skip: |
             .git
             .husky
@@ -52,7 +52,7 @@ jobs:
             *.jpg
             package.json
             package-lock.json
-          # 可选：专有名词白名单文件（若你保留的话）
+          # 可选：专有名词白名单文件
           ignore_words_file: .codespellignore
-          # 发现错误使 CI 失败（设为 true 则只警告不失败）
+          # 发现错误使 CI 失败, 设为 true 则只警告不失败
           only_warn: true
