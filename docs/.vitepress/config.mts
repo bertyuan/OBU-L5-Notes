@@ -89,7 +89,7 @@ export default defineConfig({
     editLink: {
       pattern:
         "https://github.com/bertyuan/OBU-L5-Notes/edit/main/docs/:path",
-      text: "Edit this page on GitHub",
+      text: "Suggest changes to this page on GitHub",
     },
 
     search: {
@@ -107,7 +107,7 @@ export default defineConfig({
     codeTransformers: [
       transformerTwoslash() 
     ],
-    // Explicitly load these languages for types hightlighting
+    // Explicitly load these languages for types highlighting
     languages: ['js', 'jsx', 'ts', 'tsx']
     
   },

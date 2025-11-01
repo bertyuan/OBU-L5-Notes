@@ -1,4 +1,4 @@
-# Week4 - Basics of C++ Object Orientation
+# Week 4 - Basics of C++ Object Orientation
 
 >[!NOTE]
 >【Glossary 词汇表】  
