@@ -59,7 +59,7 @@ export default defineConfig({
 
       {
         text: "HCI",
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: "Module Brief", link: "/notes/HCI/Module-Brief.md" },
           { text: "Week 1", link: "/notes/HCI/Week1.md" },
@@ -69,7 +69,7 @@ export default defineConfig({
 
       {
         text: "IPD",
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: "Module Brief", link: "/notes/IPD/Module-Brief.md" },
           { text: "Week 1", link: "/notes/IPD/Week1.md" },
