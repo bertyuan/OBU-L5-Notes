@@ -51,9 +51,17 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: "Module Brief", link: "/notes/DB/Module-Brief.md" },
-          { text: "Week 1", link: "/notes/DB/Week1.md" },
-          { text: "Week 2", link: "/notes/DB/Week2.md" },
-          { text: "Week 3", link: "/notes/DB/Week3.md" },
+          { text: "Week 1 Lecture", link: "/notes/DB/Week1.md" },
+          { text: "Week 1 Seminar", link: "/notes/DB/Week1-seminar.md" },
+          { text: "Week 2 Lecture", link: "/notes/DB/Week2.md" },
+          { text: "Week 2 Seminar", link: "/notes/DB/Week2-seminar.md" },
+          { text: "Week 3 Lecture", link: "/notes/DB/Week3.md" },
+          { text: "Week 3 Seminar", link: "/notes/DB/Week3-seminar.md" },
+          // { text: "Week 4 Lecture", link: "/notes/DB/Week4.md" },
+          { text: "Week 4 Seminar", link: "/notes/DB/Week4-seminar.md" },
+          //  { text: "Week 5 Lecture", link: "/notes/DB/Week5.md" },
+          { text: "Week 5 Seminar", link: "/notes/DB/Week5-seminar.md" },
+
         ],
       },
 
