@@ -59,8 +59,10 @@ export default defineConfig({
           { text: "Week 3 Seminar", link: "/notes/DB/Week3-seminar.md" },
           // { text: "Week 4 Lecture", link: "/notes/DB/Week4.md" },
           { text: "Week 4 Seminar", link: "/notes/DB/Week4-seminar.md" },
-          //  { text: "Week 5 Lecture", link: "/notes/DB/Week5.md" },
+          // { text: "Week 5 Lecture", link: "/notes/DB/Week5.md" },
           { text: "Week 5 Seminar", link: "/notes/DB/Week5-seminar.md" },
+          // { text: "Week 6 Lecture", link: "/notes/DB/Week6.md" },
+          { text: "Week 6 Seminar", link: "/notes/DB/Week6-seminar.md" },
 
         ],
       },
