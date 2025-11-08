@@ -1,4 +1,4 @@
-# Coursework1
+# SdwCaCPP Coursework1
 
 ## Important Dates
 

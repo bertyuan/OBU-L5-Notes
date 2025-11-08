@@ -51,6 +51,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: "Module Brief", link: "/notes/DB/Module-Brief.md" },
+          { text: "Coursework 1", link: "/notes/DB/Coursework1.md" },
           { text: "Week 1 Lecture", link: "/notes/DB/Week1.md" },
           { text: "Week 1 Seminar", link: "/notes/DB/Week1-seminar.md" },
           { text: "Week 2 Lecture", link: "/notes/DB/Week2.md" },
