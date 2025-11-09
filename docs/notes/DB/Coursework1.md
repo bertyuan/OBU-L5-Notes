@@ -10,7 +10,7 @@ The two coursework of this module address the following learning outcomes:
 - Exploit techniques for storing and querying XML data.
 
 > [!NOTE]IMPORTANT INFORMATION
-> - Due date: **(17th Nov. 2025, Monday at 13:00)**.
+> - <p>Due date: <span style="color: red;">17th Nov. 2025, Monday at 13:00</span>.</p>
 > - This coursework is to be carried out individually.
 > - You have been given one DTD file (**orders_sample**) and three XML files (**orders_sample**, **library_orders**, and **library_clients**) to be used for the coursework.
 
