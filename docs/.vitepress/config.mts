@@ -71,7 +71,8 @@ export default defineConfig({
           // { text: "Week 7 Lecture", link: "/notes/DB/Week7.md" },
           { text: "Week 7 Seminar", link: "/notes/DB/Week7-seminar.md" },
           // { text: "Week 8 Lecture", link: "/notes/DB/Week8.md" },
-          // { text: "Week 8 Seminar", link: "/notes/DB/Week8-seminar.md" },
+          { text: "Week 8 Seminar", link: "/notes/DB/Week8-seminar.md" },
+          { text: "Week 9 Seminar", link: "/notes/DB/Week9-seminar.md" },
 
         ],
       },
