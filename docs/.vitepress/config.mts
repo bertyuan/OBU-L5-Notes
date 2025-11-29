@@ -32,6 +32,7 @@ export default defineConfig({
         items: [
           { text: "Module Brief", link: "/notes/SdwCaCPP/Module-Brief.md" },
           { text: "Coursework 1", link: "/notes/SdwCaCPP/Coursework1.md" },
+          { text: "Coursework 2", link: "/notes/SdwCaCPP/Coursework2.md" },
           { text: "Week 1 Lecture", link: "/notes/SdwCaCPP/Week1.md" },
           { text: "Week 1 Seminar", link: "/notes/SdwCaCPP/Week1-seminar.md" },
           { text: "Week 2 Lecture", link: "/notes/SdwCaCPP/Week2.md" },
