@@ -81,6 +81,8 @@ A key part of most text adventure games is the ability to fight with the NPC ene
 
 - Modify the `State` class to include a representation of the player’s physical `strength`, called strength, which is initiated as 100, and when strength goes to 0, the program shall be terminated.
 - 修改 `State` 类，以包含玩家物理 `strength` 的表示，称为力量，初始值为 100，当力量降至 0 时，程序应终止。
+- Modify the `state` class to include a list of the game objects that the player is carrying, called `inventory`.
+- 修改 `State` 类，包括玩家携带的游戏物品列表，称为 `inventory`。
 - Modify the `Room::describe()` method to print out the keywords of all the objects in the room, formatted as nicely as possible.
 - 修改 `Room::describe()` 方法，使其能够以尽可能好的格式打印出房间中所有对象的关键词。
 
