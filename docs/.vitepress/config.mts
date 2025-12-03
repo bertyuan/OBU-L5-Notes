@@ -48,6 +48,8 @@ export default defineConfig({
           { text: "Week 7 Seminar", link: "/notes/SdwCaCPP/Week7-seminar.md" },
           { text: "Week 8 Lecture", link: "/notes/SdwCaCPP/Week8.md" },
           { text: "Week 8 Seminar", link: "/notes/SdwCaCPP/Week8-seminar.md" },
+          { text: "Week 9 Lecture", link: "/notes/SdwCaCPP/Week9.md" },
+          { text: "Week 9 Seminar", link: "/notes/SdwCaCPP/Week9-seminar.md" },
         ],
       },
 
