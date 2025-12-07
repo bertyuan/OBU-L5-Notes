@@ -70,9 +70,9 @@
   .slide-enter,
   .slide-enter-content > * {
     --enter-stage: 0;
-    --enter-step: 150ms;
+    --enter-step: 60ms;
     --enter-initial: 0ms;
-    animation: slide-enter 1s both 1;
+    animation: slide-enter 0.4s both 1;
     animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
   }
 
@@ -100,9 +100,9 @@
   /* Apply animation to VitePress document content */
   .vp-doc > * {
     --enter-stage: 0;
-    --enter-step: 150ms;
+    --enter-step: 60ms;
     --enter-initial: 0ms;
-    animation: slide-enter 1s both 1;
+    animation: slide-enter 0.4s both 1;
     animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
   }
 
