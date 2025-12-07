@@ -100,9 +100,9 @@
   /* Apply animation to VitePress document content */
   .vp-doc > * {
     --enter-stage: 0;
-    --enter-step: 90ms;
+    --enter-step: 150ms;
     --enter-initial: 0ms;
-    animation: slide-enter 0.6s both 1;
+    animation: slide-enter 1s both 1;
     animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
   }
 
