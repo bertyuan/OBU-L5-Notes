@@ -95,6 +95,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "Module Brief", link: "/notes/IPD/Module-Brief.md" },
+          { text: "Sprint 2", link: "/notes/IPD/Sprint2.md" },
           { text: "Week 1", link: "/notes/IPD/Week1.md" },
           { text: "Week 2", link: "/notes/IPD/Week2.md" },
           { text: "Week 3", link: "/notes/IPD/Week3.md" },
