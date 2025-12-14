@@ -50,6 +50,8 @@ export default defineConfig({
           { text: "Week 8 Seminar", link: "/notes/SdwCaCPP/Week8-seminar.md" },
           { text: "Week 9 Lecture", link: "/notes/SdwCaCPP/Week9.md" },
           { text: "Week 9 Seminar", link: "/notes/SdwCaCPP/Week9-seminar.md" },
+          { text: "Week 10 Lecture", link: "/notes/SdwCaCPP/Week10.md" },
+          { text: "Week 10 Seminar", link: "/notes/SdwCaCPP/Week10-seminar.md" },
         ],
       },
 
@@ -77,13 +79,14 @@ export default defineConfig({
           // { text: "Week 8 Lecture", link: "/notes/DB/Week8.md" },
           { text: "Week 8 Seminar", link: "/notes/DB/Week8-seminar.md" },
           { text: "Week 9 Seminar", link: "/notes/DB/Week9-seminar.md" },
+          { text: "Week 10 Seminar", link: "/notes/DB/Week10-seminar.md" },
 
         ],
       },
 
       {
         text: "HCI",
-        collapsed: true,
+        // collapsed: true,
         items: [
           { text: "Module Brief", link: "/notes/HCI/Module-Brief.md" },
           { text: "Week 1", link: "/notes/HCI/Week1.md" },
@@ -93,7 +96,7 @@ export default defineConfig({
 
       {
         text: "IPD",
-        collapsed: true,
+        // collapsed: true,
         items: [
           { text: "Module Brief", link: "/notes/IPD/Module-Brief.md" },
           { text: "Sprint 2", link: "/notes/IPD/Sprint2.md" },

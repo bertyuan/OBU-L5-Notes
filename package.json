@@ -6,6 +6,9 @@
   },
   "devDependencies": {
     "@shikijs/vitepress-twoslash": "^3.14.0",
+    "@unocss/preset-icons": "^66.5.10",
+    "@unocss/preset-web-fonts": "^66.5.10",
+    "unocss": "^66.5.10",
     "vitepress": "^2.0.0-alpha.12"
   },
   "dependencies": {

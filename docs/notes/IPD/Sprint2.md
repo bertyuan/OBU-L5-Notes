@@ -6,7 +6,7 @@ Students will focus on defining the **technical backbone** of their projects, su
 
 ---
 
-## Deliverables for Week 11–12
+## Deliverables for Week 11-12
 
 * Sprint documentation
   * Sprint 2 Trello board
