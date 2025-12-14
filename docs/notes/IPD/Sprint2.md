@@ -4,8 +4,6 @@
 
 Students will focus on defining the **technical backbone** of their projects, such as architecture, data models, and integration strategies.
 
----
-
 ## Deliverables for Week 11-12
 
 * Sprint documentation
@@ -30,8 +28,6 @@ That is to say, the user should be able to, on the front end:
 * Retrieve information from the database, and
 * Write information into the database.
 
----
-
 ## Defining Acceptance Criteria Examples
 
 ### For the database schema
@@ -43,8 +39,6 @@ That is to say, the user should be able to, on the front end:
 
 * OAuth authentication is implemented and tested with **3 platforms**.
 * Error handling returns user-friendly messages for failed logins.
-
----
 
 ## High-Level Architecture
 
@@ -59,8 +53,6 @@ That is to say, the user should be able to, on the front end:
 * **Frontend:** React-based dashboard.
 * **Backend:** Node.js API handling user data.
 * **Database:** PostgreSQL storing performance and inventory data.
-
----
 
 ## The Product Ideas for Students to Select
 
@@ -157,8 +149,6 @@ A web platform that connects users to local events and activities based on their
 * **Database:** PostgreSQL for relational data, Redis for caching.
 * **Third-Party APIs:** Baidu Maps API, Stripe for ticket payments.
 
----
-
 ## Technical User Stories for HabitHive (Mobile App)
 
 ### Database Design
@@ -184,8 +174,6 @@ As a developer, I want to implement a push notification service so that users ar
 1. Notifications are sent at the user-specified time.
 2. The notification service retries failed messages up to **3 times**.
 3. Users can toggle notifications on or off.
-
----
 
 ## Technical User Stories for EventSphere (Website)
 
