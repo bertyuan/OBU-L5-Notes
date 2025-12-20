@@ -91,6 +91,7 @@ export default defineConfig({
           { text: "Module Brief", link: "/notes/HCI/Module-Brief.md" },
           { text: "Week 1", link: "/notes/HCI/Week1.md" },
           { text: "Week 2", link: "/notes/HCI/Week2.md" },
+          { text: "Quiz 1", link: "/notes/HCI/Quiz1.md" },
         ],
       },
 
