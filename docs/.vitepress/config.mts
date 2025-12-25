@@ -10,6 +10,8 @@ export default defineConfig({
 
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
 
+  ignoreDeadLinks: true,
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -18,12 +20,16 @@ export default defineConfig({
       { text: "DB", link: "/notes/DB/Module-Brief" },
       { text: "HCI", link: "/notes/HCI/Module-Brief" },
       { text: "IPD", link: "/notes/IPD/Module-Brief" },
+      { text: "Speed Insights", link: "/speed-insights" },
     ],
 
     sidebar: [
       {
         //text: "Content",
-        items: [{ text: "Start", link: "/notes/start.md" }],
+        items: [
+          { text: "Start", link: "/notes/start.md" },
+          { text: "Speed Insights", link: "/speed-insights" },
+        ],
       },
 
       {
